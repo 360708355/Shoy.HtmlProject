@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>百货购API</title>
+    <link rel="stylesheet" href="http://fed.www.100hg.com/bootstrap/css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" href="http://fed.www.100hg.com/bootstrap/css/bootstrap-responsive.min.css" media="all" />
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+        .sidebar-nav {
+            padding: 9px 0;
+        }
+        .nav-header{font-size: 16px;}
+        .navbar-inverse .brand{color:#fff;}
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="brand" href="#">百货购API接口文档</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">用户接口</li>
+                        <li><a href="#">get_user</a></li>
+                        <li><a href="#">add_user</a></li>
+                        <li><a href="#">update_user</a></li>
+                        <li class="nav-header">类目接口</li>
+                        <li><a href="#">get_category</a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li class="nav-header">商品接口</li>
+                        <li class="nav-header">店铺接口</li>
+                        <li api_name="shop_search"><a href="#">shop.search</a></li>
+                        <li api_name="shop_push"><a href="#">shop.push</a></li>
+                        <li class="nav-header">交易接口</li>
+                        <li api_name="trade_provinces"><a href="#">trade.provinces</a></li>
+                        <li api_name="trade_cities"><a href="#">trade.cities</a></li>
+                        <li api_name="trade_receivers"><a href="#">trade.receivers</a></li>
+                        <li api_name="trade_expresses"><a href="#">trade.expresses</a></li>
+                        <li api_name="trade_add_cart"><a href="#">trade.add_cart</a></li>
+                        <li api_name="trade_generate_orders"><a href="#">trade.generate_orders</a></li>
+                        <li api_name="trade_search_orders"><a href="#">trade.search_orders</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span9 d_api-con">
+                <div class="hero-unit">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://fed.www.100hg.com/js.axd?paths=jquery-1.7.2.min.js,bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var $navs=$(".nav-list li").not(".nav-header");
+        var get_desc=function(navObj){
+            var $nav=$(navObj);
+            $navs.removeClass("active");
+            $nav.addClass("active");
+            var api_name=$nav.attr("api_name");
+            if(api_name){
+                $.get("apiTools/"+api_name+".html",
+                    {},function(data){
+                        $(".d_api-con").html(data);
+                    }
+                ,"text");
+            }
+        };
+        $(document)
+            .ready(function(){
+                get_desc($navs.eq(0));
+            })
+            .delegate(".nav-list li","click",function(){
+                if($(this).hasClass("nav-header"))
+                    return false;
+                get_desc(this);
+            })
+        ;
+    </script>
+</body>
+</html>

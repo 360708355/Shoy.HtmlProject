@@ -1,0 +1,63 @@
+<div class="hero-unit">
+    <h4 class="api_main_intro">店铺推送</h4>
+    <div class="well">
+        店铺推送
+    </div>
+    <h5>1.接口说明</h5>
+    <div>根据商品ID推送店铺</div>
+    <h5>2.应用场景</h5>
+    <h5>3.接口调用说明</h5>
+    <h6>3.1 请求说明</h6>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>url</td>
+            <td>http://www.api.100hg.com/apiTools/router/verify.shy</td>
+        </tr>
+        <tr>
+            <td>格式</td>
+            <td>JSON</td>
+        </tr>
+        <tr>
+            <td>请求方式</td>
+            <td>GET</td>
+        </tr>
+    </table>
+    <h6>3.2 请求参数说明</h6>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>method</td>
+            <td>固定为：shop.push</td>
+        </tr>
+        <tr>
+            <td>product_id</td>
+            <td>商品ID</td>
+        </tr>
+    </table>
+    <h6>3.3 返回参数说明</h6>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>state</td>
+            <td>状态：1成功，其他失败</td>
+        </tr>
+        <tr>
+            <td>msg</td>
+            <td>错误信息</td>
+        </tr>
+        <tr>
+            <td>result</td>
+            <td>返回结果</td>
+        </tr>
+        <tr>
+            <td>result.id</td>
+            <td>店铺ID</td>
+        </tr>
+        <tr>
+            <td>result.sub</td>
+            <td>店铺二级域名</td>
+        </tr>
+        <tr>
+            <td>result.name</td>
+            <td>店铺名称</td>
+        </tr>
+    </table>
+</div>

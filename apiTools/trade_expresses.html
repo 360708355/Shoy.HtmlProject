@@ -1,0 +1,87 @@
+<div class="hero-unit">
+    <h4 class="api_main_intro">获取快递方式列表</h4>
+    <div class="well">
+        根据供货商Id、省份Id、城市Id、商品Id列表获取快递方式列表
+    </div>
+    <h5>1.接口说明</h5>
+    <div>根据供货商Id、省份Id、城市Id、商品Id列表获取快递方式列表</div>
+    <h5>2.应用场景</h5>
+    <h5>3.接口调用说明</h5>
+    <h6>3.1 请求说明</h6>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>url</td>
+            <td>http://www.api.100hg.com/apiTools/router/verify.shy</td>
+        </tr>
+        <tr>
+            <td>格式</td>
+            <td>JSON</td>
+        </tr>
+        <tr>
+            <td>请求方式</td>
+            <td>GET</td>
+        </tr>
+    </table>
+    <h6>3.2 请求参数说明</h6>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>method</td>
+            <td>固定为：trade.expresses</td>
+        </tr>
+        <tr>
+            <td>province_id</td>
+            <td>省份ID</td>
+        </tr>
+        <tr>
+            <td>city_id</td>
+            <td>城市ID</td>
+        </tr>
+        <tr>
+            <td>factory_id</td>
+            <td>供货商ID</td>
+        </tr>
+        <tr>
+            <td>product_ids</td>
+            <td>商品ID列表，多个ID之间以,隔开。</td>
+        </tr>
+    </table>
+    <h6>3.3 返回参数说明</h6>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>state</td>
+            <td>状态：1成功，其他失败</td>
+        </tr>
+        <tr>
+            <td>msg</td>
+            <td>错误信息</td>
+        </tr>
+        <tr>
+            <td>result</td>
+            <td>收货地址信息列表</td>
+        </tr>
+        <tr>
+            <td>result[i].postId</td>
+            <td>快递方式ID</td>
+        </tr>
+        <tr>
+            <td>result[i].postWay</td>
+            <td>快递方式</td>
+        </tr>
+        <tr>
+            <td>result[i].fp</td>
+            <td>首重金额</td>
+        </tr>
+        <tr>
+            <td>result[i].fw</td>
+            <td>首重单位(g)</td>
+        </tr>
+        <tr>
+            <td>result[i].sp</td>
+            <td>续重金额</td>
+        </tr>
+        <tr>
+            <td>result[i].sw</td>
+            <td>续重单位(g)</td>
+        </tr>
+    </table>
+</div>

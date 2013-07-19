@@ -1,0 +1,103 @@
+<div class="hero-unit">
+    <h4 class="api_main_intro">获取收货人信息</h4>
+    <div class="well">
+        根据收货人ID，类型，获取收货人信息
+    </div>
+    <h5>1.接口说明</h5>
+    <div>根据收货人ID，类型，获取收货人信息</div>
+    <h5>2.应用场景</h5>
+    <h5>3.接口调用说明</h5>
+    <h6>3.1 请求说明</h6>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>url</td>
+            <td>http://www.api.100hg.com/apiTools/router/verify.shy</td>
+        </tr>
+        <tr>
+            <td>格式</td>
+            <td>JSON</td>
+        </tr>
+        <tr>
+            <td>请求方式</td>
+            <td>GET</td>
+        </tr>
+    </table>
+    <h6>3.2 请求参数说明</h6>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>method</td>
+            <td>固定为：trade.receivers</td>
+        </tr>
+        <tr>
+            <td>user_id</td>
+            <td>用户ID</td>
+        </tr>
+        <tr>
+            <td>user_type</td>
+            <td>用户类型：1为普通会员，12为商家</td>
+        </tr>
+    </table>
+    <h6>3.3 返回参数说明</h6>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>state</td>
+            <td>状态：1成功，其他失败</td>
+        </tr>
+        <tr>
+            <td>msg</td>
+            <td>错误信息</td>
+        </tr>
+        <tr>
+            <td>result</td>
+            <td>收货地址信息列表</td>
+        </tr>
+        <tr>
+            <td>result[i].Id</td>
+            <td>收货地址信息ID</td>
+        </tr>
+        <tr>
+            <td>result[i].UserType</td>
+            <td>用户类型</td>
+        </tr>
+        <tr>
+            <td>result[i].UserId</td>
+            <td>用户ID</td>
+        </tr>
+        <tr>
+            <td>result[i].Receiver</td>
+            <td>收货人</td>
+        </tr>
+        <tr>
+            <td>result[i].ReceiverMobile</td>
+            <td>收货人电话</td>
+        </tr>
+        <tr>
+            <td>result[i].ProvinceId</td>
+            <td>收货人省份ID</td>
+        </tr>
+        <tr>
+            <td>result[i].ProvinceName</td>
+            <td>收货人省份</td>
+        </tr>
+        <tr>
+            <td>result[i].CityId</td>
+            <td>收货人城市ID</td>
+        </tr>
+        <tr>
+            <td>result[i].CityName</td>
+            <td>收货人城市</td>
+        </tr>
+        <tr>
+            <td>result[i].ReceiverAddress</td>
+            <td>收货人街道地址</td>
+        </tr>
+        <tr>
+            <td>result[i].PostCode</td>
+            <td>收货人邮编</td>
+        </tr>
+        <tr>
+            <td>result[i].IsDefatul</td>
+            <td>是否是默认收货地址</td>
+        </tr>
+    </table>
+</div>
