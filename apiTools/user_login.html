@@ -1,0 +1,67 @@
+<div class="hero-unit">
+    <h4 class="api_main_intro">用户登录</h4>
+    <div class="well">
+        用户登录
+    </div>
+    <h5>1.接口说明</h5>
+    <div>支持会员及加盟商登录</div>
+    <h5>2.应用场景</h5>
+    <h5>3.接口调用说明</h5>
+    <h6>3.1 请求说明</h6>
+    <table class="table table-bordered">
+        <tr>
+            <td>url</td>
+            <td>http://www.api.100hg.com/apiTools/router/verify.shy</td>
+        </tr>
+        <tr>
+            <td>格式</td>
+            <td>JSON</td>
+        </tr>
+        <tr>
+            <td>请求方式</td>
+            <td>GET</td>
+        </tr>        
+    </table>
+    <h6>3.2 请求参数说明</h6>
+    <table class="table table-bordered">
+        <tr>
+            <td>method</td>
+            <td>固定为：user.login</td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td>登录帐号</td>
+        </tr>
+        <tr>
+            <td>pwd</td>
+            <td>登录密码</td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>登录类型：0默认、1会员、2加盟商</td>
+        </tr>
+    </table>
+    <h6>3.3 返回参数说明</h6>
+    <table class="table table-bordered">
+        <tr>
+            <td>state</td>
+            <td>状态：0失败、1成功</td>
+        </tr>
+        <tr>
+            <td>msg</td>
+            <td>错误信息</td>
+        </tr>
+        <tr>
+            <td>result</td>
+            <td>返回结果</td>
+        </tr>
+        <tr>
+            <td>result.utype</td>
+            <td>登录类型：1会员、2加盟商、3会员加盟商均满足，需深度登录，指定调用参数type</td>
+        </tr>
+        <tr>
+            <td>result.session</td>
+            <td>登录凭证</td>
+        </tr>
+    </table>
+</div>
