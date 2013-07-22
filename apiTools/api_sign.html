@@ -1,11 +1,47 @@
 <div class="hero-unit">
     <h4 class="api_main_intro">参数签名</h4>
     <div class="well">
-        一些api接口需要对参数进行密钥签名才能调用。签名方式：除partner和sign外的所有参数冒泡排序后加上partnerKey
+        一些api接口需要对参数进行密钥签名才能调用。<br />
+        签名方式：除partner和sign外的所有参数冒泡排序后加上partnerKey
         (形如：method=user.login&id=123&name=abc+partnerKey)
         的md5值的小写。
     </div>
     <div>
-
+        <code>c#版冒泡排序</code>
+        <pre>
+            /// <summary>
+            /// 冒泡排序法
+            /// 按照字母序列从a到z的顺序排列
+            /// </summary>
+            private static string[] BubbleSort(string[] r)
+            {
+                //交换标志
+                int i;
+                //最多做R.Length-1趟排序
+                for (i = 0; i < r.Length; i++)
+                {
+                    bool exchange = false;
+                    int j; //交换标志
+                    for (j = r.Length - 2; j >= i; j--)
+                    {
+                        //交换条件
+                        if (String.CompareOrdinal(r[j + 1], r[j]) < 0)
+                        {
+                        string temp = r[j + 1];
+                        r[j + 1] = r[j];
+                        r[j] = temp;
+                        //发生了交换，故将交换标志置为真
+                        exchange = true;
+                        }
+                    }
+                    //本趟排序未发生交换，提前终止算法
+                    if (!exchange)
+                    {
+                        break;
+                    }
+                }
+                return r;
+            }
+        </pre>
     </div>
 </div>
