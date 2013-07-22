@@ -11,7 +11,7 @@
     <table class="table table-bordered table-striped">
         <tr>
             <td>url</td>
-            <td>http://www.api.100hg.com/apiTools/router/verify.shy</td>
+            <td>http://www.api.100hg.com/apiTools/router.verify</td>
         </tr>
         <tr>
             <td>格式</td>
@@ -25,54 +25,81 @@
     <h6>3.2 请求参数说明</h6>
     <table class="table table-bordered table-striped">
         <tr>
+            <th>名称</th>
+            <th>类型</th>
+            <th>是否必须</th>
+            <th>描述</th>
+        </tr>
+        <tr>
             <td>method</td>
-            <td>固定为：shop.search</td>
+            <td>String</td>
+            <td>是</td>
+            <td>固定为shop.search</td>
         </tr>
         <tr>
             <td>key</td>
+            <td>String</td>
+            <td>是</td>
             <td>搜索关键字</td>
         </tr>
         <tr>
             <td>page_no</td>
+            <td>Int</td>
+            <td>否</td>
             <td>默认为1，表示第几页</td>
         </tr>
         <tr>
             <td>page_size</td>
+            <td>Int</td>
+            <td>否</td>
             <td>默认为25，表示每页返回多少条数据</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
     <table class="table table-bordered table-striped">
         <tr>
+            <th>名称</th>
+            <th>类型</th>
+            <th>描述</th>
+        </tr>
+        <tr>
             <td>state</td>
+            <td>Int</td>
             <td>状态：1成功，其他失败</td>
         </tr>
         <tr>
             <td>msg</td>
+            <td>String</td>
             <td>错误信息</td>
         </tr>
         <tr>
             <td>result</td>
+            <td>Json</td>
             <td>返回结果</td>
         </tr>
         <tr>
             <td>result.count</td>
+            <td>Int</td>
             <td>总的条数</td>
         </tr>
         <tr>
             <td>result.list</td>
+            <td>Json</td>
             <td>结果列表</td>
         </tr>
         <tr>
             <td>result.list[i].id</td>
+            <td>Int</td>
             <td>店铺ID</td>
         </tr>
         <tr>
             <td>result.list[i].sub</td>
+            <td>String</td>
             <td>店铺二级域名</td>
         </tr>
         <tr>
             <td>result.list[i].name</td>
+            <td>String</td>
             <td>店铺名称</td>
         </tr>
     </table>

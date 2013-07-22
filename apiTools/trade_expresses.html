@@ -11,7 +11,7 @@
     <table class="table table-bordered table-striped">
         <tr>
             <td>url</td>
-            <td>http://www.api.100hg.com/apiTools/router/verify.shy</td>
+            <td>http://www.api.100hg.com/apiTools/router.verify</td>
         </tr>
         <tr>
             <td>格式</td>
@@ -25,62 +25,92 @@
     <h6>3.2 请求参数说明</h6>
     <table class="table table-bordered table-striped">
         <tr>
+            <th>名称</th>
+            <th>类型</th>
+            <th>是否必须</th>
+            <th>描述</th>
+        </tr>
+        <tr>
             <td>method</td>
+            <td>String</td>
+            <td>是</td>
             <td>固定为：trade.expresses</td>
         </tr>
         <tr>
             <td>province_id</td>
+            <td>Int</td>
+            <td>是</td>
             <td>省份ID</td>
         </tr>
         <tr>
             <td>city_id</td>
+            <td>Int</td>
+            <td>是</td>
             <td>城市ID</td>
         </tr>
         <tr>
             <td>factory_id</td>
+            <td>Int</td>
+            <td>是</td>
             <td>供货商ID</td>
         </tr>
         <tr>
             <td>product_ids</td>
+            <td>String</td>
+            <td>是</td>
             <td>商品ID列表，多个ID之间以,隔开。</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
     <table class="table table-bordered table-striped">
         <tr>
+            <th>名称</th>
+            <th>类型</th>
+            <th>描述</th>
+        </tr>
+        <tr>
             <td>state</td>
+            <td>Int</td>
             <td>状态：1成功，其他失败</td>
         </tr>
         <tr>
             <td>msg</td>
+            <td>String</td>
             <td>错误信息</td>
         </tr>
         <tr>
             <td>result</td>
+            <td>Json</td>
             <td>收货地址信息列表</td>
         </tr>
         <tr>
             <td>result[i].postId</td>
+            <td>Int</td>
             <td>快递方式ID</td>
         </tr>
         <tr>
             <td>result[i].postWay</td>
+            <td>String</td>
             <td>快递方式</td>
         </tr>
         <tr>
             <td>result[i].fp</td>
+            <td>Float</td>
             <td>首重金额</td>
         </tr>
         <tr>
             <td>result[i].fw</td>
+            <td>Int</td>
             <td>首重单位(g)</td>
         </tr>
         <tr>
             <td>result[i].sp</td>
+            <td>Float</td>
             <td>续重金额</td>
         </tr>
         <tr>
             <td>result[i].sw</td>
+            <td>Int</td>
             <td>续重单位(g)</td>
         </tr>
     </table>

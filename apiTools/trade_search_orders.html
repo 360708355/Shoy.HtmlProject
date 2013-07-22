@@ -1,7 +1,7 @@
 <div class="hero-unit">
-    <h4 class="api_main_intro">加入购物车</h4>
+    <h4 class="api_main_intro">获取订单信息</h4>
     <div class="well">
-        把商品加入购物车
+        获取订单信息
     </div>
     <h5>1.接口说明</h5>
     <div>把商品加入购物车，期间会进行一系列判断，包括库存、活动、商品状态等。</div>
@@ -11,7 +11,7 @@
     <table class="table table-bordered table-striped">
         <tr>
             <td>url</td>
-            <td>http://www.api.100hg.com/apiTools/router/verify.shy</td>
+            <td>http://www.api.100hg.com/apiTools/router.verify</td>
         </tr>
         <tr>
             <td>格式</td>
@@ -25,32 +25,22 @@
     <h6>3.2 请求参数说明</h6>
     <table class="table table-bordered table-striped">
         <tr>
+            <th>名称</th>
+            <th>类型</th>
+            <th>是否必须</th>
+            <th>描述</th>
+        </tr>
+        <tr>
             <td>method</td>
-            <td>固定为：trade.add_cart</td>
+            <td>String</td>
+            <td>是</td>
+            <td>固定为：trade.search_orders</td>
         </tr>
         <tr>
-            <td>user_id</td>
-            <td>用户ID</td>
-        </tr>
-        <tr>
-            <td>user_type</td>
-            <td>用户类型：1为普通会员，12为商家</td>
-        </tr>
-        <tr>
-            <td>product_id</td>
-            <td>商品ID</td>
-        </tr>
-        <tr>
-            <td>product_size</td>
-            <td>商品规格</td>
-        </tr>
-        <tr>
-            <td>product_color</td>
-            <td>商品颜色</td>
-        </tr>
-        <tr>
-            <td>count</td>
-            <td>数量</td>
+            <td>order_num</td>
+            <td>String</td>
+            <td>是</td>
+            <td>订单编号，长度为14位</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>

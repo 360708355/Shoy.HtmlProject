@@ -11,7 +11,7 @@
     <table class="table table-bordered table-striped">
         <tr>
             <td>url</td>
-            <td>http://www.api.100hg.com/apiTools/router/verify.shy</td>
+            <td>http://www.api.100hg.com/apiTools/router.verify</td>
         </tr>
         <tr>
             <td>格式</td>
@@ -25,78 +25,114 @@
     <h6>3.2 请求参数说明</h6>
     <table class="table table-bordered table-striped">
         <tr>
+            <th>名称</th>
+            <th>类型</th>
+            <th>是否必须</th>
+            <th>描述</th>
+        </tr>
+        <tr>
             <td>method</td>
+            <td>String</td>
+            <td>是</td>
             <td>固定为：trade.add_cart</td>
         </tr>
         <tr>
             <td>user_id</td>
+            <td>Int</td>
+            <td>是</td>
             <td>用户ID</td>
         </tr>
         <tr>
             <td>user_type</td>
+            <td>Int</td>
+            <td>否</td>
             <td>用户类型：1为普通会员，12为商家</td>
         </tr>
         <tr>
             <td>product_id</td>
+            <td>Int</td>
+            <td>是</td>
             <td>商品ID</td>
         </tr>
         <tr>
             <td>product_size</td>
+            <td>String</td>
+            <td>是</td>
             <td>商品规格</td>
         </tr>
         <tr>
             <td>product_color</td>
+            <td>String</td>
+            <td>是</td>
             <td>商品颜色</td>
         </tr>
         <tr>
             <td>count</td>
+            <td>Int</td>
+            <td>是</td>
             <td>数量</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
     <table class="table table-bordered table-striped">
         <tr>
+            <th>名称</th>
+            <th>类型</th>
+            <th>描述</th>
+        </tr>
+        <tr>
             <td>state</td>
+            <td>Int</td>
             <td>状态：1成功，其他失败</td>
         </tr>
         <tr>
             <td>msg</td>
+            <td>String</td>
             <td>错误信息</td>
         </tr>
         <tr>
             <td>result</td>
+            <td>Json</td>
             <td>返回结果</td>
         </tr>
         <tr>
             <td>result.id</td>
+            <td>Int</td>
             <td>商品ID</td>
         </tr>
         <tr>
             <td>result.num</td>
+            <td>String</td>
             <td>商品编号</td>
         </tr>
         <tr>
             <td>result.name</td>
+            <td>String</td>
             <td>商品名称</td>
         </tr>
         <tr>
             <td>result.price</td>
+            <td>Float</td>
             <td>会员价</td>
         </tr>
         <tr>
             <td>result.price_vip</td>
+            <td>Float</td>
             <td>vip价，user_type为12时，才会有</td>
         </tr>
         <tr>
             <td>result.count</td>
+            <td>Int</td>
             <td>该商品在购物车中的数量，包含这次添加的</td>
         </tr>
         <tr>
             <td>result.wight</td>
+            <td>Int</td>
             <td>单个商品重量(g)</td>
         </tr>
         <tr>
             <td>result.pictures</td>
+            <td>Array</td>
             <td>商品图片列表：result.pictures[0]为50X50,result.pictures[1]为90X90,result.pictures[2]为120X120</td>
         </tr>
     </table>
