@@ -4,7 +4,7 @@
         用户登录
     </div>
     <h5>1.接口说明</h5>
-    <div>支持会员及加盟商登录</div>
+    <div>/// 支持会员及加盟商登录</div>
     <h5>2.应用场景</h5>
     <h5>3.接口调用说明</h5>
     <h6>3.1 请求说明</h6>
@@ -24,43 +24,67 @@
     </table>
     <h6>3.2 请求参数说明</h6>
     <table class="table table-bordered">
+		<tr>
+			<th>名称</th>
+			<th>类型</th>
+			<th>是否必须</th>
+			<th>描述</th>
+		</tr>
         <tr>
             <td>method</td>
+			<td>String</td>
+			<td>是</td>
             <td>固定为：user.login</td>
         </tr>
         <tr>
             <td>name</td>
+			<td>String</td>
+			<td>是</td>
             <td>登录帐号</td>
         </tr>
         <tr>
             <td>pwd</td>
+			<td>String</td>
+			<td>是</td>
             <td>登录密码</td>
         </tr>
         <tr>
             <td>type</td>
+			<td>Int</td>
+			<td>否</td>
             <td>登录类型：0默认、1会员、2加盟商</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
     <table class="table table-bordered">
+		<tr>
+			<th>名称</th>
+			<th>类型</th>
+			<th>描述</th>
+		</tr>
         <tr>
             <td>state</td>
+			<td>Int</td>
             <td>状态：0失败、1成功</td>
         </tr>
         <tr>
             <td>msg</td>
+			<td>String</td>
             <td>错误信息</td>
         </tr>
         <tr>
             <td>result</td>
+			<td>Json</td>
             <td>返回结果</td>
         </tr>
         <tr>
             <td>result.utype</td>
+			<td>Int</td>
             <td>登录类型：1会员、2加盟商、3会员加盟商均满足，需深度登录，指定调用参数type</td>
         </tr>
         <tr>
             <td>result.session</td>
+			<td>String</td>
             <td>登录凭证</td>
         </tr>
     </table>
