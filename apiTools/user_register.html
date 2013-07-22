@@ -4,11 +4,11 @@
         会员注册
     </div>
     <h5>1.接口说明</h5>
-    <div>仅支持会员注册</div>
+    <div>/// 仅支持会员注册</div>
     <h5>2.应用场景</h5>
     <h5>3.接口调用说明</h5>
     <h6>3.1 请求说明</h6>
-    <table class="table table-bordered">
+    <table class="table table-bordered table-striped">
         <tr>
             <td>url</td>
             <td>http://www.api.100hg.com/apiTools/router.verify</td>
@@ -19,49 +19,68 @@
         </tr>
         <tr>
             <td>请求方式</td>
-            <td>GET</td>
+            <td>POST</td>
         </tr>        
     </table>
     <h6>3.2 请求参数说明</h6>
-    <table class="table table-bordered">
+    <table class="table table-bordered table-striped">
+		<tr>
+			<th>名称</th>
+			<th>类型</th>
+			<th>是否必须</th>
+			<th>描述</th>
+		</tr>
         <tr>
             <td>method</td>
+			<td>String</td>
+			<td>是</td>
             <td>固定为：user.register</td>
         </tr>
         <tr>
             <td>name</td>
+			<td>String</td>
+			<td>是</td>
             <td>帐号</td>
         </tr>
         <tr>
             <td>pwd</td>
+			<td>String</td>
+			<td>是</td>
             <td>密码</td>
         </tr>
         <tr>
             <td>realname</td>
+			<td>String</td>
+			<td>否</td>
             <td>真实姓名，可为空字符串</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
-    <table class="table table-bordered">
+    <table class="table table-bordered table-striped">
+		<tr>
+			<th>名称</th>
+			<th>类型</th>
+			<th>描述</th>
+		</tr>
         <tr>
             <td>state</td>
+			<td>Int</td>
             <td>状态：0失败、1成功</td>
         </tr>
         <tr>
             <td>msg</td>
+			<td>String</td>
             <td>错误信息</td>
         </tr>
         <tr>
             <td>result</td>
+			<td>Json</td>
             <td>返回结果</td>
         </tr>
         <tr>
-            <td>result.utype</td>
-            <td>类型：1会员</td>
-        </tr>
-        <tr>
             <td>result.session</td>
-            <td>登录凭证</td>
+			<td>String</td>
+            <td>登录凭证。</td>
         </tr>
     </table>
 </div>
