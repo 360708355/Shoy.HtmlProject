@@ -1,11 +1,11 @@
 <div class="hero-unit">
-    <h4 class="api_main_intro">商品详细</h4>
+    <h4 class="api_main_intro">收藏列表</h4>
     <div class="well">
-        商品列表
+        收藏列表
     </div>
     <h5>1.接口说明</h5>
 	<div>
-        /// 获取商品详细信息
+        /// 商品收藏列表
 	</div>
     <h5>2.应用场景</h5>
     <h5>3.接口调用说明</h5>
@@ -36,18 +36,12 @@
             <td>method</td>
 			<td>String</td>
 			<td>是</td>
-            <td>固定为：product.item</td>
-        </tr>
-        <tr>
-            <td>product_id</td>
-			<td>Int</td>
-			<td>是</td>
-            <td>商品ID</td>
+            <td>固定为：product.collectlist</td>
         </tr>
         <tr>
             <td>ticket</td>
 			<td>String</td>
-			<td>否</td>
+			<td>是</td>
             <td>登录凭证</td>
         </tr>
     </table>
@@ -74,79 +68,44 @@
             <td>返回结果</td>
         </tr>
         <tr>
-            <td>result.id</td>
+            <td>result.count</td>
 			<td>Int</td>
-            <td>商品ID</td>
+            <td>总的条数</td>
         </tr>
         <tr>
-            <td>result.Num</td>
+            <td>result.list</td>
+			<td>Json</td>
+            <td>结果列表,收藏时间降序排列</td>
+        </tr>
+        <tr>
+            <td>result.list[i].id</td>
+			<td>Int</td>
+            <td>ID</td>
+        </tr>
+        <tr>
+            <td>result.list[i].num</td>
 			<td>String</td>
             <td>货号</td>
         </tr>
         <tr>
-            <td>result.Name</td>
+            <td>result.list[i].name</td>
 			<td>String</td>
             <td>名称</td>
         </tr>
         <tr>
-            <td>result.Pic160</td>
+            <td>result.list[i].pic160</td>
 			<td>String</td>
             <td>图片路径</td>
         </tr>
         <tr>
-            <td>result.PriceMarket</td>
+            <td>result.list[i].price</td>
+			<td>Double</td>
+            <td>会员价</td>
+        </tr>
+        <tr>
+            <td>result.list[i].pricemarket</td>
 			<td>Double</td>
             <td>市场价</td>
-        </tr>
-        <tr>
-            <td>result.Price</td>
-			<td>Double</td>
-            <td>会员价/VIP价 [根据登录凭证返回]</td>
-        </tr>
-        <tr>
-            <td>result.BrandName</td>
-			<td>String</td>
-            <td>品牌名称</td>
-        </tr>
-        <tr>
-            <td>result.stock</td>
-			<td>Int</td>
-            <td>库存</td>
-        </tr>
-        <tr>
-            <td>result.isbuy</td>
-			<td>Int</td>
-            <td>是否可以购买：1是、0否</td>
-        </tr>
-        <tr>
-            <td>result.msg</td>
-			<td>String</td>
-            <td>不能购买原因</td>
-        </tr>
-        <tr>
-            <td>result.detail</td>
-			<td>String</td>
-            <td>商品描述（暂缺）</td>
-        </tr>
-        <tr>
-            <td>result.colors</td>
-			<td>Array</td>
-            <td>商品颜色数组</td>
-        </tr>
-        <tr>
-            <td>result.colors[i]</td>
-			<td>String</td>
-            <td>颜色名称</td>
-        </tr>
-        <tr>
-            <td>result.sizes</td>
-			<td>Array</td>
-            <td>商品尺码数组</td>
-        </tr>
-        <tr>
-            <td>result.sizes[i]</td>
-			<td>String</td>
-            <td>尺码名称</td>
         </tr>
     </table>
 </div>
