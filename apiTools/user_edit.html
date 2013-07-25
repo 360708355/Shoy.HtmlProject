@@ -1,0 +1,82 @@
+<div class="hero-unit">
+    <h4 class="api_main_intro">编辑用户信息</h4>
+    <div class="well">
+        编辑用户信息
+    </div>
+    <h5>1.接口说明</h5>
+    <div>/// 更新用户信息</div>
+    <h5>2.应用场景</h5>
+    <h5>3.接口调用说明</h5>
+    <h6>3.1 请求说明</h6>
+    <table class="table table-bordered">
+        <tr>
+            <td>url</td>
+            <td>http://www.api.100hg.com/apiTools/router.verify</td>
+        </tr>
+        <tr>
+            <td>格式</td>
+            <td>JSON</td>
+        </tr>
+        <tr>
+            <td>请求方式</td>
+            <td>POST</td>
+        </tr>        
+    </table>
+    <h6>3.2 请求参数说明</h6>
+    <table class="table table-bordered">
+		<tr>
+			<th>名称</th>
+			<th>类型</th>
+			<th>是否必须</th>
+			<th>描述</th>
+		</tr>
+        <tr>
+            <td>method</td>
+			<td>String</td>
+			<td>是</td>
+            <td>固定为：user.edit</td>
+        </tr>
+        <tr>
+            <td>ticket</td>
+			<td>String</td>
+			<td>是</td>
+            <td>登录凭证</td>
+        </tr>
+        <tr>
+            <td>realname</td>
+			<td>String</td>
+			<td>否</td>
+            <td>真实姓名</td>
+        </tr>
+        <tr>
+            <td>mobile</td>
+			<td>String</td>
+			<td>否</td>
+            <td>手机号码</td>
+        </tr>
+        <tr>
+            <td>qq</td>
+			<td>String</td>
+			<td>否</td>
+            <td>QQ号码</td>
+        </tr>
+    </table>
+    <h6>3.3 返回参数说明</h6>
+    <table class="table table-bordered">
+		<tr>
+			<th>名称</th>
+			<th>类型</th>
+			<th>描述</th>
+		</tr>
+        <tr>
+            <td>state</td>
+			<td>Int</td>
+            <td>状态：0失败、1成功</td>
+        </tr>
+        <tr>
+            <td>msg</td>
+			<td>String</td>
+            <td>提示信息</td>
+        </tr>
+    </table>
+</div>
