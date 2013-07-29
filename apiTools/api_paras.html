@@ -1,0 +1,35 @@
+<div class="hero-unit">
+    <h4 class="api_main_intro">系统级参数</h4>
+    <div class="well">
+        一些api接口需要对参数进行密钥签名才能调用。<br />
+        签名方式：除partner和sign外的所有参数冒泡排序后加上partnerKey
+        (形如：method=user.login&id=123&name=abc+partnerKey)
+        的md5值的小写。
+    </div>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>名称</th>
+            <th>类型</th>
+            <th>是否必须</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <td>partner</td>
+            <td>String</td>
+            <td>是</td>
+            <td>api约定的partner_id</td>
+        </tr>
+        <tr>
+            <td>sign</td>
+            <td>String</td>
+            <td>是</td>
+            <td>参数签名，详见：<a href="#" onclick="location.hash='#api_sign'; location.reload(true);">签名验证</a></td>
+        </tr>
+        <tr>
+            <td>method</td>
+            <td>String</td>
+            <td>是</td>
+            <td>调用的方法，需加入签名。</td>
+        </tr>
+    </table>
+</div>
