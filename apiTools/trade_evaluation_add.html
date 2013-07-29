@@ -1,10 +1,10 @@
 <div class="hero-unit">
-    <h4 class="api_main_intro">搜索店铺</h4>
+    <h4 class="api_main_intro">提交评价</h4>
     <div class="well">
-        搜索店铺
+        在交易完成之后，用户可以提交评价。
     </div>
     <h5>1.接口说明</h5>
-    <div>根据关键字搜索店铺</div>
+    <div>在交易完成之后，用户可以提交评价。</div>
     <h5>2.应用场景</h5>
     <h5>3.接口调用说明</h5>
     <h6>3.1 请求说明</h6>
@@ -19,8 +19,8 @@
         </tr>
         <tr>
             <td>请求方式</td>
-            <td>GET</td>
-        </tr>        
+            <td>POST</td>
+        </tr>
     </table>
     <h6>3.2 请求参数说明</h6>
     <table class="table table-bordered table-striped">
@@ -34,25 +34,31 @@
             <td>method</td>
             <td>String</td>
             <td>是</td>
-            <td>固定为shop.search</td>
+            <td>固定为trade.evaluation_add</td>
         </tr>
         <tr>
-            <td>key</td>
+            <td>ticket</td>
             <td>String</td>
             <td>是</td>
-            <td>搜索关键字</td>
+            <td>用户登录凭证。</td>
         </tr>
         <tr>
-            <td>page_no</td>
+            <td>product_id</td>
             <td>Int</td>
-            <td>否</td>
-            <td>默认为1，表示第几页</td>
+            <td>是</td>
+            <td>商品Id。</td>
         </tr>
         <tr>
-            <td>page_size</td>
+            <td>score</td>
             <td>Int</td>
-            <td>否</td>
-            <td>默认为25，表示每页返回多少条数据</td>
+            <td>是</td>
+            <td>综合评分，0-5。</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>String</td>
+            <td>是</td>
+            <td>用户评价内容。</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
@@ -71,36 +77,6 @@
             <td>msg</td>
             <td>String</td>
             <td>错误信息</td>
-        </tr>
-        <tr>
-            <td>result</td>
-            <td>Object</td>
-            <td>返回结果</td>
-        </tr>
-        <tr>
-            <td>result.count</td>
-            <td>Int</td>
-            <td>总的条数</td>
-        </tr>
-        <tr>
-            <td>result.list</td>
-            <td>Object</td>
-            <td>结果列表</td>
-        </tr>
-        <tr>
-            <td>result.list[i].id</td>
-            <td>Int</td>
-            <td>店铺ID</td>
-        </tr>
-        <tr>
-            <td>result.list[i].sub</td>
-            <td>String</td>
-            <td>店铺二级域名</td>
-        </tr>
-        <tr>
-            <td>result.list[i].name</td>
-            <td>String</td>
-            <td>店铺名称</td>
         </tr>
     </table>
 </div>

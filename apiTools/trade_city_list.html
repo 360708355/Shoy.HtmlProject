@@ -1,10 +1,10 @@
 <div class="hero-unit">
-    <h4 class="api_main_intro">搜索店铺</h4>
+    <h4 class="api_main_intro">获取城市信息</h4>
     <div class="well">
-        搜索店铺
+        获取对应省份的城市信息
     </div>
     <h5>1.接口说明</h5>
-    <div>根据关键字搜索店铺</div>
+    <div>获取对应省份的城市信息</div>
     <h5>2.应用场景</h5>
     <h5>3.接口调用说明</h5>
     <h6>3.1 请求说明</h6>
@@ -20,7 +20,7 @@
         <tr>
             <td>请求方式</td>
             <td>GET</td>
-        </tr>        
+        </tr>
     </table>
     <h6>3.2 请求参数说明</h6>
     <table class="table table-bordered table-striped">
@@ -34,25 +34,13 @@
             <td>method</td>
             <td>String</td>
             <td>是</td>
-            <td>固定为shop.search</td>
+            <td>固定为：trade.city_list</td>
         </tr>
         <tr>
-            <td>key</td>
-            <td>String</td>
+            <td>province_id</td>
+            <td>Int</td>
             <td>是</td>
-            <td>搜索关键字</td>
-        </tr>
-        <tr>
-            <td>page_no</td>
-            <td>Int</td>
-            <td>否</td>
-            <td>默认为1，表示第几页</td>
-        </tr>
-        <tr>
-            <td>page_size</td>
-            <td>Int</td>
-            <td>否</td>
-            <td>默认为25，表示每页返回多少条数据</td>
+            <td>省份ID</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
@@ -74,33 +62,23 @@
         </tr>
         <tr>
             <td>result</td>
-            <td>Object</td>
-            <td>返回结果</td>
+            <td>Json</td>
+            <td>城市列表</td>
         </tr>
         <tr>
-            <td>result.count</td>
+            <td>result[i].pid</td>
             <td>Int</td>
-            <td>总的条数</td>
+            <td>省份ID</td>
         </tr>
         <tr>
-            <td>result.list</td>
-            <td>Object</td>
-            <td>结果列表</td>
-        </tr>
-        <tr>
-            <td>result.list[i].id</td>
+            <td>result[i].id</td>
             <td>Int</td>
-            <td>店铺ID</td>
+            <td>城市ID</td>
         </tr>
         <tr>
-            <td>result.list[i].sub</td>
+            <td>result[i].name</td>
             <td>String</td>
-            <td>店铺二级域名</td>
-        </tr>
-        <tr>
-            <td>result.list[i].name</td>
-            <td>String</td>
-            <td>店铺名称</td>
+            <td>城市名字</td>
         </tr>
     </table>
 </div>

@@ -1,10 +1,10 @@
 <div class="hero-unit">
-    <h4 class="api_main_intro">获取收货人信息</h4>
+    <h4 class="api_main_intro">获取快递方式列表</h4>
     <div class="well">
-        根据收货人ID，类型，获取收货人信息
+        根据供货商Id、省份Id、城市Id、商品Id列表获取快递方式列表
     </div>
     <h5>1.接口说明</h5>
-    <div>根据收货人ID，类型，获取收货人信息</div>
+    <div>根据供货商Id、省份Id、城市Id、商品Id列表获取快递方式列表</div>
     <h5>2.应用场景</h5>
     <h5>3.接口调用说明</h5>
     <h6>3.1 请求说明</h6>
@@ -34,13 +34,31 @@
             <td>method</td>
             <td>String</td>
             <td>是</td>
-            <td>固定为：trade.receivers</td>
+            <td>固定为：trade.express_list</td>
         </tr>
         <tr>
-            <td>ticket</td>
+            <td>province_id</td>
+            <td>Int</td>
+            <td>是</td>
+            <td>省份ID</td>
+        </tr>
+        <tr>
+            <td>city_id</td>
+            <td>Int</td>
+            <td>是</td>
+            <td>城市ID</td>
+        </tr>
+        <tr>
+            <td>factory_id</td>
+            <td>Int</td>
+            <td>是</td>
+            <td>供货商ID</td>
+        </tr>
+        <tr>
+            <td>product_ids</td>
             <td>String</td>
             <td>是</td>
-            <td>用户令牌，包含登录后的用户信息，登录时获取。</td>
+            <td>商品ID列表，多个ID之间以,隔开。</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
@@ -66,54 +84,34 @@
             <td>收货地址信息列表</td>
         </tr>
         <tr>
-            <td>result[i].id</td>
+            <td>result[i].post_id</td>
             <td>Int</td>
-            <td>收货地址信息ID</td>
+            <td>快递方式ID</td>
         </tr>
         <tr>
-            <td>result[i].receiver</td>
+            <td>result[i].postway</td>
             <td>String</td>
-            <td>收货人</td>
+            <td>快递方式</td>
         </tr>
         <tr>
-            <td>result[i].receiver_mobile</td>
-            <td>String</td>
-            <td>收货人电话</td>
+            <td>result[i].fp</td>
+            <td>Float</td>
+            <td>首重金额</td>
         </tr>
         <tr>
-            <td>result[i].province_id</td>
+            <td>result[i].fw</td>
             <td>Int</td>
-            <td>收货人省份ID</td>
+            <td>首重单位(g)</td>
         </tr>
         <tr>
-            <td>result[i].province_name</td>
-            <td>String</td>
-            <td>收货人省份</td>
+            <td>result[i].sp</td>
+            <td>Float</td>
+            <td>续重金额</td>
         </tr>
         <tr>
-            <td>result[i].city_id</td>
+            <td>result[i].sw</td>
             <td>Int</td>
-            <td>收货人城市ID</td>
-        </tr>
-        <tr>
-            <td>result[i].city_name</td>
-            <td>String</td>
-            <td>收货人城市</td>
-        </tr>
-        <tr>
-            <td>result[i].receiver_address</td>
-            <td>String</td>
-            <td>收货人街道地址</td>
-        </tr>
-        <tr>
-            <td>result[i].postcode</td>
-            <td>String</td>
-            <td>收货人邮编</td>
-        </tr>
-        <tr>
-            <td>result[i].is_defatul</td>
-            <td>Bool</td>
-            <td>是否是默认收货地址</td>
+            <td>续重单位(g)</td>
         </tr>
     </table>
 </div>

@@ -1,7 +1,7 @@
 <div class="hero-unit">
-    <h4 class="api_main_intro">加入购物车</h4>
+    <h4 class="api_main_intro">获取订单信息</h4>
     <div class="well">
-        把商品加入购物车
+        获取订单信息
     </div>
     <h5>1.接口说明</h5>
     <div>把商品加入购物车，期间会进行一系列判断，包括库存、活动、商品状态等。</div>
@@ -19,7 +19,7 @@
         </tr>
         <tr>
             <td>请求方式</td>
-            <td>POST</td>
+            <td>GET</td>
         </tr>
     </table>
     <h6>3.2 请求参数说明</h6>
@@ -34,37 +34,19 @@
             <td>method</td>
             <td>String</td>
             <td>是</td>
-            <td>固定为：trade.add_cart</td>
+            <td>固定为：trade.orders_search</td>
         </tr>
         <tr>
             <td>ticket</td>
             <td>String</td>
-            <td>否</td>
-            <td>用户令牌，包含登录后的用户信息，登录时获取。未登录用户为空。</td>
-        </tr>
-        <tr>
-            <td>product_id</td>
-            <td>Int</td>
             <td>是</td>
-            <td>商品ID</td>
+            <td>用户令牌，包含登录后的用户信息，登录时获取。</td>
         </tr>
         <tr>
-            <td>product_size</td>
+            <td>order_num</td>
             <td>String</td>
             <td>是</td>
-            <td>商品规格</td>
-        </tr>
-        <tr>
-            <td>product_color</td>
-            <td>String</td>
-            <td>是</td>
-            <td>商品颜色</td>
-        </tr>
-        <tr>
-            <td>count</td>
-            <td>Int</td>
-            <td>是</td>
-            <td>数量</td>
+            <td>订单编号，长度为14位</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
@@ -86,46 +68,70 @@
         </tr>
         <tr>
             <td>result</td>
-            <td>Json</td>
+            <td>Object</td>
             <td>返回结果</td>
-        </tr>
-        <tr>
-            <td>result.id</td>
-            <td>Int</td>
-            <td>商品ID</td>
-        </tr>
-        <tr>
-            <td>result.num</td>
-            <td>String</td>
-            <td>商品编号</td>
-        </tr>
-        <tr>
-            <td>result.name</td>
-            <td>String</td>
-            <td>商品名称</td>
-        </tr>
-        <tr>
-            <td>result.price</td>
-            <td>Float</td>
-            <td>会员价</td>
-        </tr>
-        <tr>
-            <td>result.price_vip</td>
-            <td>Float</td>
-            <td>vip价，user_type为12时，才会有</td>
         </tr>
         <tr>
             <td>result.count</td>
             <td>Int</td>
+            <td>订单数量</td>
+        </tr>
+        <tr>
+            <td>result.list</td>
+            <td>Object</td>
+            <td>返回结果</td>
+        </tr>
+        <tr>
+            <td>result.list[i].order_num</td>
+            <td>String</td>
+            <td>订单号</td>
+        </tr>
+        <tr>
+            <td>result.list[i].payment_type</td>
+            <td>Int</td>
+            <td>支付方式，1：在线支付；3：余额支付。</td>
+        </tr>
+        <tr>
+            <td>result.list[i].order_state</td>
+            <td>Int</td>
+            <td>订单状态，-2：未支付，-1：用户取消，0：未处理；1：正在备货；2：审核失败；3：已经发货；4：发货失败；5：交易完成。</td>
+        </tr>
+        <tr>
+            <td>result.list[i].products</td>
+            <td>Array</td>
+            <td>商品列表</td>
+        </tr>
+        <tr>
+            <td>result.list[i].products[j].id</td>
+            <td>Int</td>
+            <td>商品ID</td>
+        </tr>
+        <tr>
+            <td>result.list[i].products[j].num</td>
+            <td>商品编号</td>
+        </tr>
+        <tr>
+            <td>result.list[i].products[j].name</td>
+            <td>String</td>
+            <td>商品名称</td>
+        </tr>
+        <tr>
+            <td>result.list[i].products[j].price</td>
+            <td>Double</td>
+            <td>会员价</td>
+        </tr>
+        <tr>
+            <td>result.list[i].products[j].price_vip</td>
+            <td>Double</td>
+            <td>vip价，商家登录后，才能获取</td>
+        </tr>
+        <tr>
+            <td>result.list[i].products[j].count</td>
+            <td>Int</td>
             <td>该商品在购物车中的数量，包含这次添加的</td>
         </tr>
         <tr>
-            <td>result.wight</td>
-            <td>Int</td>
-            <td>单个商品重量(g)</td>
-        </tr>
-        <tr>
-            <td>result.pictures</td>
+            <td>result.list[i].products[j].pictures</td>
             <td>Array</td>
             <td>商品图片列表：result.pictures[0]为50X50,result.pictures[1]为90X90,result.pictures[2]为120X120</td>
         </tr>

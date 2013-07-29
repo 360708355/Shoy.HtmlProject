@@ -1,10 +1,10 @@
 <div class="hero-unit">
-    <h4 class="api_main_intro">获取快递方式列表</h4>
+    <h4 class="api_main_intro">加入购物车</h4>
     <div class="well">
-        根据供货商Id、省份Id、城市Id、商品Id列表获取快递方式列表
+        把商品加入购物车
     </div>
     <h5>1.接口说明</h5>
-    <div>根据供货商Id、省份Id、城市Id、商品Id列表获取快递方式列表</div>
+    <div>把商品加入购物车，期间会进行一系列判断，包括库存、活动、商品状态等。</div>
     <h5>2.应用场景</h5>
     <h5>3.接口调用说明</h5>
     <h6>3.1 请求说明</h6>
@@ -19,7 +19,7 @@
         </tr>
         <tr>
             <td>请求方式</td>
-            <td>GET</td>
+            <td>POST</td>
         </tr>
     </table>
     <h6>3.2 请求参数说明</h6>
@@ -34,31 +34,37 @@
             <td>method</td>
             <td>String</td>
             <td>是</td>
-            <td>固定为：trade.expresses</td>
+            <td>固定为：trade.cart_add</td>
         </tr>
         <tr>
-            <td>province_id</td>
+            <td>ticket</td>
+            <td>String</td>
+            <td>否</td>
+            <td>用户令牌，包含登录后的用户信息，登录时获取。未登录用户为空。</td>
+        </tr>
+        <tr>
+            <td>product_id</td>
             <td>Int</td>
             <td>是</td>
-            <td>省份ID</td>
+            <td>商品ID</td>
         </tr>
         <tr>
-            <td>city_id</td>
-            <td>Int</td>
-            <td>是</td>
-            <td>城市ID</td>
-        </tr>
-        <tr>
-            <td>factory_id</td>
-            <td>Int</td>
-            <td>是</td>
-            <td>供货商ID</td>
-        </tr>
-        <tr>
-            <td>product_ids</td>
+            <td>product_size</td>
             <td>String</td>
             <td>是</td>
-            <td>商品ID列表，多个ID之间以,隔开。</td>
+            <td>商品规格</td>
+        </tr>
+        <tr>
+            <td>product_color</td>
+            <td>String</td>
+            <td>是</td>
+            <td>商品颜色</td>
+        </tr>
+        <tr>
+            <td>count</td>
+            <td>Int</td>
+            <td>是</td>
+            <td>数量，正数为增加，负数为减少。当购物车中数量小于1，即为删除。</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
@@ -80,38 +86,48 @@
         </tr>
         <tr>
             <td>result</td>
-            <td>Json</td>
-            <td>收货地址信息列表</td>
+            <td>Object</td>
+            <td>返回结果</td>
         </tr>
         <tr>
-            <td>result[i].post_id</td>
+            <td>result.id</td>
             <td>Int</td>
-            <td>快递方式ID</td>
+            <td>商品ID</td>
         </tr>
         <tr>
-            <td>result[i].postway</td>
+            <td>result.num</td>
             <td>String</td>
-            <td>快递方式</td>
+            <td>商品编号</td>
         </tr>
         <tr>
-            <td>result[i].fp</td>
+            <td>result.name</td>
+            <td>String</td>
+            <td>商品名称</td>
+        </tr>
+        <tr>
+            <td>result.price</td>
             <td>Float</td>
-            <td>首重金额</td>
+            <td>会员价</td>
         </tr>
         <tr>
-            <td>result[i].fw</td>
-            <td>Int</td>
-            <td>首重单位(g)</td>
-        </tr>
-        <tr>
-            <td>result[i].sp</td>
+            <td>result.price_vip</td>
             <td>Float</td>
-            <td>续重金额</td>
+            <td>vip价，商家登录后，才能获取</td>
         </tr>
         <tr>
-            <td>result[i].sw</td>
+            <td>result.count</td>
             <td>Int</td>
-            <td>续重单位(g)</td>
+            <td>该商品在购物车中的数量，包含这次添加的</td>
+        </tr>
+        <tr>
+            <td>result.wight</td>
+            <td>Int</td>
+            <td>单个商品重量(g)</td>
+        </tr>
+        <tr>
+            <td>result.pictures</td>
+            <td>Array</td>
+            <td>商品图片列表：result.pictures[0]为50X50,result.pictures[1]为90X90,result.pictures[2]为120X120</td>
         </tr>
     </table>
 </div>

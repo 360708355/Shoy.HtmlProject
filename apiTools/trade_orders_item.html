@@ -1,10 +1,10 @@
 <div class="hero-unit">
-    <h4 class="api_main_intro">获取订单信息</h4>
+    <h4 class="api_main_intro">订单详情</h4>
     <div class="well">
-        获取订单信息
+        根据订单号获取订单详细信息
     </div>
     <h5>1.接口说明</h5>
-    <div>把商品加入购物车，期间会进行一系列判断，包括库存、活动、商品状态等。</div>
+    <div>根据订单号获取订单详细信息。</div>
     <h5>2.应用场景</h5>
     <h5>3.接口调用说明</h5>
     <h6>3.1 请求说明</h6>
@@ -34,7 +34,7 @@
             <td>method</td>
             <td>String</td>
             <td>是</td>
-            <td>固定为：trade.search_orders</td>
+            <td>固定为：trade.orders_item</td>
         </tr>
         <tr>
             <td>ticket</td>
@@ -52,47 +52,83 @@
     <h6>3.3 返回参数说明</h6>
     <table class="table table-bordered table-striped">
         <tr>
+            <th>名称</th>
+            <th>类型</th>
+            <th>描述</th>
+        </tr>
+        <tr>
             <td>state</td>
+            <td>Int</td>
             <td>状态：1成功，其他失败</td>
         </tr>
         <tr>
             <td>msg</td>
+            <td>String</td>
             <td>错误信息</td>
         </tr>
         <tr>
             <td>result</td>
+            <td>Object</td>
             <td>返回结果</td>
         </tr>
         <tr>
-            <td>result.id</td>
+            <td>result.order_num</td>
+            <td>String</td>
+            <td>订单编号</td>
+        </tr>
+        <tr>
+            <td>result.payment_type</td>
+            <td>Int</td>
+            <td>支付方式，1：在线支付；3：余额支付。</td>
+        </tr>
+        <tr>
+            <td>result.order_state</td>
+            <td>Int</td>
+            <td>订单状态，-2：未支付，-1：用户取消，0：未处理；1：正在备货；2：审核失败；3：已经发货；4：发货失败；5：交易完成。</td>
+        </tr>
+        <tr>
+            <td>result.products</td>
+            <td>Array</td>
+            <td>商品列表</td>
+        </tr>
+        <tr>
+            <td>result.product[i].id</td>
+            <td>Int</td>
             <td>商品ID</td>
         </tr>
         <tr>
-            <td>result.num</td>
+            <td>result.products[i].num</td>
+            <td>String</td>
             <td>商品编号</td>
         </tr>
         <tr>
-            <td>result.name</td>
+            <td>result.products[i].name</td>
+            <td>String</td>
             <td>商品名称</td>
         </tr>
         <tr>
-            <td>result.price</td>
+            <td>result.products[i].price</td>
+            <td>Double</td>
             <td>会员价</td>
         </tr>
         <tr>
-            <td>result.price_vip</td>
-            <td>vip价，user_type为12时，才会有</td>
+            <td>result.products[i].price_vip</td>
+            <td>Double</td>
+            <td>vip价，商家登录后，才能获取</td>
         </tr>
         <tr>
-            <td>result.count</td>
+            <td>result.products[i].count</td>
+            <td>Int</td>
             <td>该商品在购物车中的数量，包含这次添加的</td>
         </tr>
         <tr>
-            <td>result.wight</td>
+            <td>result.products[i].wight</td>
+            <td>Int</td>
             <td>单个商品重量(g)</td>
         </tr>
         <tr>
-            <td>result.pictures</td>
+            <td>result.products[i].pictures</td>
+            <td>Array</td>
             <td>商品图片列表：result.pictures[0]为50X50,result.pictures[1]为90X90,result.pictures[2]为120X120</td>
         </tr>
     </table>
