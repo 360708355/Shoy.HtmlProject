@@ -37,8 +37,7 @@
                         <li api_name="user_findpwd"><a href="#">user.findpwd</a></li>
                         <li api_name="user_updatepwd"><a href="#">user.updatepwd</a></li>
                         <li api_name="user_info"><a href="#">user.info</a></li>
-                        <li api_name="user_edit"><a href="#">user.edit</a></li>
-						
+                        <li api_name="user_edit"><a href="#">user.edit</a></li>						
                         <li class="nav-header">类目接口</li>
                         <li api_name="product_categorys"><a href="#">product.categorys</a></li>
                         <li class="nav-header">商品接口</li>
@@ -59,7 +58,7 @@
                         <li api_name="trade_generate_orders"><a href="#">trade.generate_orders</a></li>
                         <li api_name="trade_search_orders"><a href="#">trade.search_orders</a></li>
                         <li class="nav-header">其他说明</li>
-                        <li api_name="system_param"><a href="#">系统级参数</a></li>
+                        <li api_name="api_paras"><a href="#">系统级参数</a></li>
                         <li api_name="api_sign"><a href="#">签名验证</a></li>
                     </ul>
                 </div>
@@ -88,7 +87,11 @@
         };
         $(document)
             .ready(function(){
-                get_desc($navs.eq(0));
+				var hash=location.hash;
+				if(!hash || hash=="#")
+					get_desc($navs.eq(0));
+				else
+					get_desc($(".nav-list li[api_name="+hash.replace("#","")+"]"));
             })
             .delegate(".nav-list li","click",function(){
                 if($(this).hasClass("nav-header"))
