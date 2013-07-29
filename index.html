@@ -31,32 +31,32 @@
                 <div class="well sidebar-nav">
                     <ul class="nav nav-list">
                         <li class="nav-header">用户接口</li>
-                        <li api_name="user_login"><a href="#">user.login</a></li>
-                        <li api_name="user_loginout"><a href="#">user.loginout</a></li>
-                        <li api_name="user_register"><a href="#">user.register</a></li>
-                        <li api_name="user_findpwd"><a href="#">user.findpwd</a></li>
-                        <li api_name="user_updatepwd"><a href="#">user.updatepwd</a></li>
-                        <li api_name="user_info"><a href="#">user.info</a></li>
-                        <li api_name="user_edit"><a href="#">user.edit</a></li>						
+                        <li><a href="#">user.login</a></li>
+                        <li><a href="#">user.loginout</a></li>
+                        <li><a href="#">user.register</a></li>
+                        <li><a href="#">user.findpwd</a></li>
+                        <li><a href="#">user.updatepwd</a></li>
+                        <li><a href="#">user.info</a></li>
+                        <li><a href="#">user.edit</a></li>
                         <li class="nav-header">类目接口</li>
-                        <li api_name="product_categorys"><a href="#">product.categorys</a></li>
+                        <li><a href="#">product.categorys</a></li>
                         <li class="nav-header">商品接口</li>
-						<li api_name="product_item"><a href="#">product.item</a></li>
-                        <li api_name="product_list"><a href="#">product.list</a></li>
-                        <li api_name="product_search"><a href="#">product.search</a></li>
-                        <li api_name="product_collect"><a href="#">product.collect</a></li>
-                        <li api_name="product_collectlist"><a href="#">product.collectlist</a></li>
+						<li><a href="#">product.item</a></li>
+                        <li><a href="#">product.list</a></li>
+                        <li><a href="#">product.search</a></li>
+                        <li><a href="#">product.collect</a></li>
+                        <li><a href="#">product.collectlist</a></li>
                         <li class="nav-header">店铺接口</li>
-                        <li api_name="shop_search"><a href="#">shop.search</a></li>
-                        <li api_name="shop_push"><a href="#">shop.push</a></li>
+                        <li><a href="#">shop.search</a></li>
+                        <li><a href="#">shop.push</a></li>
                         <li class="nav-header">交易接口</li>
-                        <li api_name="trade_provinces"><a href="#">trade.provinces</a></li>
-                        <li api_name="trade_cities"><a href="#">trade.cities</a></li>
-                        <li api_name="trade_receivers"><a href="#">trade.receivers</a></li>
-                        <li api_name="trade_expresses"><a href="#">trade.expresses</a></li>
-                        <li api_name="trade_add_cart"><a href="#">trade.add_cart</a></li>
-                        <li api_name="trade_generate_orders"><a href="#">trade.generate_orders</a></li>
-                        <li api_name="trade_search_orders"><a href="#">trade.search_orders</a></li>
+                        <li><a href="#">trade.provinces</a></li>
+                        <li><a href="#">trade.cities</a></li>
+                        <li><a href="#">trade.receivers</a></li>
+                        <li><a href="#">trade.expresses</a></li>
+                        <li><a href="#">trade.add_cart</a></li>
+                        <li><a href="#">trade.generate_orders</a></li>
+                        <li><a href="#">trade.search_orders</a></li>
                         <li class="nav-header">其他说明</li>
                         <li api_name="api_paras"><a href="#">系统级参数</a></li>
                         <li api_name="api_sign"><a href="#">签名验证</a></li>
@@ -87,7 +87,20 @@
         };
         $(document)
             .ready(function(){
-				var hash=location.hash;
+                var $links = $navs.find("a");
+				for(var i=0;i<$links.length;i++){
+					var $item=$links.eq(i),
+                        $li=$item.parent("li"),
+                        api_name="";
+                    if(!$li.attr("api_name")){
+                        api_name=$item.html().replace(".","_");
+                        $item.parent("li").attr("api_name",api_name);
+                    }else{
+                        api_name=$li.attr("api_name");
+                    }
+					$item.attr("href","#"+api_name);
+				}
+                var hash=location.hash;
 				if(!hash || hash=="#")
 					get_desc($navs.eq(0));
 				else
