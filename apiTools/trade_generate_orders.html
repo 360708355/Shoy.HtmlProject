@@ -1,10 +1,10 @@
 <div class="hero-unit">
-    <h4 class="api_main_intro">加入购物车</h4>
+    <h4 class="api_main_intro">生成订单</h4>
     <div class="well">
-        把商品加入购物车
+        结算购物车内的商品，生成订单。
     </div>
     <h5>1.接口说明</h5>
-    <div>把商品加入购物车，期间会进行一系列判断，包括库存、活动、商品状态等。</div>
+    <div>结算购物车内的商品，生成订单。</div>
     <h5>2.应用场景</h5>
     <h5>3.接口调用说明</h5>
     <h6>3.1 请求说明</h6>
@@ -25,79 +25,122 @@
     <h6>3.2 请求参数说明</h6>
     <table class="table table-bordered table-striped">
         <tr>
+            <th>名称</th>
+            <th>类型</th>
+            <th>是否必须</th>
+            <th>描述</th>
+        </tr>
+        <tr>
             <td>method</td>
-            <td>固定为：trade.add_cart</td>
+            <td>String</td>
+            <td>是</td>
+            <td>固定为：trade.generate_orders</td>
         </tr>
         <tr>
-            <td>user_id</td>
-            <td>用户ID</td>
+            <td>ticket</td>
+            <td>String</td>
+            <td>是</td>
+            <td>用户令牌，包含登录后的用户信息，登录时获取。</td>
         </tr>
         <tr>
-            <td>user_type</td>
-            <td>用户类型：1为普通会员，12为商家</td>
+            <td>receiver_name</td>
+            <td>String</td>
+            <td>是</td>
+            <td>收货人</td>
         </tr>
         <tr>
-            <td>product_id</td>
-            <td>商品ID</td>
+            <td>receiver_mobile</td>
+            <td>String</td>
+            <td>是</td>
+            <td>收货人电话</td>
         </tr>
         <tr>
-            <td>product_size</td>
-            <td>商品规格</td>
+            <td>province_id</td>
+            <td>Int</td>
+            <td>是</td>
+            <td>省份ID</td>
         </tr>
         <tr>
-            <td>product_color</td>
-            <td>商品颜色</td>
+            <td>city_id</td>
+            <td>Int</td>
+            <td>是</td>
+            <td>城市ID</td>
         </tr>
         <tr>
-            <td>count</td>
-            <td>数量</td>
+            <td>receiver_address</td>
+            <td>String</td>
+            <td>是</td>
+            <td>街道地址</td>
+        </tr>
+        <tr>
+            <td>zip_code</td>
+            <td>String</td>
+            <td>否</td>
+            <td>邮政编码</td>
+        </tr>
+        <tr>
+            <td>payment_type</td>
+            <td>Int</td>
+            <td>是</td>
+            <td>支付方式</td>
+        </tr>
+        <tr>
+            <td>coupon_id</td>
+            <td>Int</td>
+            <td>否</td>
+            <td>代金券ID</td>
+        </tr>
+        <tr>
+            <td>weight</td>
+            <td>Int</td>
+            <td>是</td>
+            <td>商品总重量</td>
+        </tr>
+        <tr>
+            <td>product_price</td>
+            <td>Float</td>
+            <td>是</td>
+            <td>商品总价</td>
+        </tr>
+        <tr>
+            <td>postage</td>
+            <td>Float</td>
+            <td>是</td>
+            <td>总运费</td>
+        </tr>
+        <tr>
+            <td>product_info</td>
+            <td>String</td>
+            <td>是</td>
+            <td>商品信息</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
     <table class="table table-bordered table-striped">
         <tr>
+            <th>名称</th>
+            <th>类型</th>
+            <th>描述</th>
+        </tr>
+        <tr>
             <td>state</td>
+            <td>Int</td>
             <td>状态：1成功，其他失败</td>
         </tr>
         <tr>
             <td>msg</td>
+            <td>String</td>
             <td>错误信息</td>
         </tr>
         <tr>
             <td>result</td>
+            <td>Json</td>
             <td>返回结果</td>
         </tr>
         <tr>
-            <td>result.id</td>
-            <td>商品ID</td>
-        </tr>
-        <tr>
-            <td>result.num</td>
-            <td>商品编号</td>
-        </tr>
-        <tr>
-            <td>result.name</td>
-            <td>商品名称</td>
-        </tr>
-        <tr>
-            <td>result.price</td>
-            <td>会员价</td>
-        </tr>
-        <tr>
-            <td>result.price_vip</td>
-            <td>vip价，user_type为12时，才会有</td>
-        </tr>
-        <tr>
-            <td>result.count</td>
-            <td>该商品在购物车中的数量，包含这次添加的</td>
-        </tr>
-        <tr>
-            <td>result.wight</td>
-            <td>单个商品重量(g)</td>
-        </tr>
-        <tr>
-            <td>result.pictures</td>
-            <td>商品图片列表：result.pictures[0]为50X50,result.pictures[1]为90X90,result.pictures[2]为120X120</td>
+            <td>result.charge_id</td>
+            <td>Int</td>
+            <td>订单交易号，不同于订单编号，一个交易号可包含多个订单编号。</td>
         </tr>
     </table>
 </div>

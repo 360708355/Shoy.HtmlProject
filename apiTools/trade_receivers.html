@@ -37,16 +37,10 @@
             <td>固定为：trade.receivers</td>
         </tr>
         <tr>
-            <td>user_id</td>
-            <td>Int</td>
+            <td>ticket</td>
+            <td>String</td>
             <td>是</td>
-            <td>用户ID</td>
-        </tr>
-        <tr>
-            <td>user_type</td>
-            <td>Int</td>
-            <td>是</td>
-            <td>用户类型：1为普通会员，12为商家</td>
+            <td>用户令牌，包含登录后的用户信息，登录时获取。</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
@@ -72,62 +66,52 @@
             <td>收货地址信息列表</td>
         </tr>
         <tr>
-            <td>result[i].Id</td>
+            <td>result[i].id</td>
             <td>Int</td>
             <td>收货地址信息ID</td>
         </tr>
         <tr>
-            <td>result[i].UserType</td>
-            <td>Int</td>
-            <td>用户类型</td>
-        </tr>
-        <tr>
-            <td>result[i].UserId</td>
-            <td>Int</td>
-            <td>用户ID</td>
-        </tr>
-        <tr>
-            <td>result[i].Receiver</td>
+            <td>result[i].receiver</td>
             <td>String</td>
             <td>收货人</td>
         </tr>
         <tr>
-            <td>result[i].ReceiverMobile</td>
+            <td>result[i].receiver_mobile</td>
             <td>String</td>
             <td>收货人电话</td>
         </tr>
         <tr>
-            <td>result[i].ProvinceId</td>
+            <td>result[i].province_id</td>
             <td>Int</td>
             <td>收货人省份ID</td>
         </tr>
         <tr>
-            <td>result[i].ProvinceName</td>
+            <td>result[i].province_name</td>
             <td>String</td>
             <td>收货人省份</td>
         </tr>
         <tr>
-            <td>result[i].CityId</td>
+            <td>result[i].city_id</td>
             <td>Int</td>
             <td>收货人城市ID</td>
         </tr>
         <tr>
-            <td>result[i].CityName</td>
+            <td>result[i].city_name</td>
             <td>String</td>
             <td>收货人城市</td>
         </tr>
         <tr>
-            <td>result[i].ReceiverAddress</td>
+            <td>result[i].receiver_address</td>
             <td>String</td>
             <td>收货人街道地址</td>
         </tr>
         <tr>
-            <td>result[i].PostCode</td>
+            <td>result[i].postcode</td>
             <td>String</td>
             <td>收货人邮编</td>
         </tr>
         <tr>
-            <td>result[i].IsDefatul</td>
+            <td>result[i].is_defatul</td>
             <td>Bool</td>
             <td>是否是默认收货地址</td>
         </tr>
