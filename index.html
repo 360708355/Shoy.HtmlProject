@@ -50,20 +50,21 @@
                         <li><a href="#">shop.search</a></li>
                         <li><a href="#">shop.push</a></li>
                         <li class="nav-header">交易接口</li>
-                        <li><a href="#">trade.province_list</a></li>
-                        <li><a href="#">trade.city_list</a></li>
-                        <li><a href="#">trade.receiver_list</a></li>
-                        <li><a href="#">trade.receiver_add</a></li>
-                        <li><a href="#">trade.express_list</a></li>
-                        <li><a href="#">trade.cart_add</a></li>
-                        <li><a href="#">trade.cart_list</a></li>
-                        <li><a href="#">trade.orders_generate</a></li>
-                        <li><a href="#">trade.orders_search</a></li>
-                        <li><a href="#">trade.orders_item</a></li>
-                        <li><a href="#">trade.evaluation_add</a></li>
-                        <li><a href="#">trade.evaluation_list</a></li>
+                        <li><a href="#">trade.province.list</a></li>
+                        <li><a href="#">trade.city.list</a></li>
+                        <li><a href="#">trade.receiver.list</a></li>
+                        <li><a href="#">trade.receiver.add</a></li>
+                        <li><a href="#">trade.express.list</a></li>
+                        <li><a href="#">trade.cart.add</a></li>
+                        <li><a href="#">trade.cart.list</a></li>
+                        <li><a href="#">trade.orders.generate</a></li>
+                        <li><a href="#">trade.orders.search</a></li>
+                        <li><a href="#">trade.orders.item</a></li>
+                        <li><a href="#">trade.orders.update</a></li>
+                        <li><a href="#">trade.evaluation.add</a></li>
+                        <li><a href="#">trade.evaluation.list</a></li>
                         <li class="nav-header">其他接口</li>
-                        <li><a href="#">other.version_detected</a></li>
+                        <li><a href="#">other.version.detected</a></li>
                         <li class="nav-header">接口说明</li>
                         <li api_name="api_paras"><a href="#">系统级参数</a></li>
                         <li api_name="api_sign"><a href="#">签名验证</a></li>
@@ -101,7 +102,7 @@
                         $li=$item.parent("li"),
                         api_name="";
                     if(!$li.attr("api_name")){
-                        api_name=$item.html().replace(".","_");
+                        api_name=$item.html().replace(/\./gi,"_");
                         $item.parent("li").attr("api_name",api_name);
                     }else{
                         api_name=$li.attr("api_name");
