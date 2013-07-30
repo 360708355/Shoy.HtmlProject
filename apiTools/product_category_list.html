@@ -1,11 +1,13 @@
 <div class="hero-unit">
-    <h4 class="api_main_intro">添加/取消收藏</h4>
+    <h4 class="api_main_intro">获取分类</h4>
     <div class="well">
-        添加/取消收藏
+        获取分类
     </div>
     <h5>1.接口说明</h5>
 	<div>
-        /// 支持会员及商家 添加/取消收藏商品
+        /// 深度必须介于0-2之间<br/>
+        /// 已指定父级分类id，深度无效<br/>
+        /// 已指定分类Id，父级分类无效
 	</div>
     <h5>2.应用场景</h5>
     <h5>3.接口调用说明</h5>
@@ -17,11 +19,11 @@
         </tr>
         <tr>
             <td>格式</td>
-            <td>JSON</td>
+            <td>Object</td>
         </tr>
         <tr>
             <td>请求方式</td>
-            <td>POST</td>
+            <td>GET</td>
         </tr>        
     </table>
     <h6>3.2 请求参数说明</h6>
@@ -36,25 +38,25 @@
             <td>method</td>
 			<td>String</td>
 			<td>是</td>
-            <td>固定为：product.collect</td>
+            <td>固定为：product.category.list</td>
         </tr>
         <tr>
-            <td>product_id</td>
+            <td>depth</td>
 			<td>Int</td>
-			<td>是</td>
-            <td>商品ID</td>
+			<td>否</td>
+            <td>深度:0一级分类(默认)、1二级分类、2三级分类。优先级最低</td>
         </tr>
         <tr>
-            <td>type</td>
+            <td>parent_id</td>
 			<td>Int</td>
-			<td>是</td>
-            <td>操作类型：0取消、1添加</td>
+			<td>否</td>
+            <td>父级分类id(默认0)。优先级其次</td>
         </tr>
         <tr>
-            <td>ticket</td>
-			<td>String</td>
-			<td>是</td>
-            <td>登录凭证</td>
+            <td>cate_id</td>
+			<td>Int</td>
+			<td>否</td>
+            <td>指定分类Id(默认0)。优先级最高</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
@@ -72,7 +74,32 @@
         <tr>
             <td>msg</td>
 			<td>String</td>
-            <td>提示信息</td>
+            <td>错误信息</td>
+        </tr>
+        <tr>
+            <td>result</td>
+			<td>Object</td>
+            <td>返回结果，数组对象</td>
+        </tr>
+        <tr>
+            <td>result[i].id</td>
+			<td>Int</td>
+            <td>ID</td>
+        </tr>
+        <tr>
+            <td>result[i].name</td>
+			<td>String</td>
+            <td>名称</td>
+        </tr>
+        <tr>
+            <td>result[i].depth</td>
+			<td>Int</td>
+            <td>深度</td>
+        </tr>
+        <tr>
+            <td>result[i].parentid</td>
+			<td>Int</td>
+            <td>父级ID</td>
         </tr>
     </table>
 </div>
