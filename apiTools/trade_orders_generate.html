@@ -34,7 +34,7 @@
             <td>method</td>
             <td>String</td>
             <td>是</td>
-            <td>固定为：trade.generate_orders</td>
+            <td>固定为：trade.orders_generate</td>
         </tr>
         <tr>
             <td>ticket</td>
@@ -82,7 +82,7 @@
             <td>payment_type</td>
             <td>Int</td>
             <td>是</td>
-            <td>支付方式</td>
+            <td>支付方式，1：线上支付；3：余额支付。</td>
         </tr>
         <tr>
             <td>coupon_id</td>
@@ -98,13 +98,13 @@
         </tr>
         <tr>
             <td>product_price</td>
-            <td>Float</td>
+            <td>Double</td>
             <td>是</td>
             <td>商品总价</td>
         </tr>
         <tr>
             <td>postage</td>
-            <td>Float</td>
+            <td>Double</td>
             <td>是</td>
             <td>总运费</td>
         </tr>

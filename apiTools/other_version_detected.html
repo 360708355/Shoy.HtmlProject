@@ -1,10 +1,10 @@
 <div class="hero-unit">
-    <h4 class="api_main_intro">获取城市信息</h4>
+    <h4 class="api_main_intro">App版本检测</h4>
     <div class="well">
-        获取对应省份的城市信息
+        App版本检测接口，用于App提供升级检测。。
     </div>
     <h5>1.接口说明</h5>
-    <div>获取对应省份的城市信息</div>
+    <div>App版本检测接口，用于App提供升级检测。</div>
     <h5>2.应用场景</h5>
     <h5>3.接口调用说明</h5>
     <h6>3.1 请求说明</h6>
@@ -34,13 +34,13 @@
             <td>method</td>
             <td>String</td>
             <td>是</td>
-            <td>固定为：trade.cities</td>
+            <td>固定为：other.version_detected</td>
         </tr>
         <tr>
-            <td>province_id</td>
+            <td>app_type</td>
             <td>Int</td>
-            <td>是</td>
-            <td>省份ID</td>
+            <td>否</td>
+            <td>App类型，默认为0,Android App;后续其他</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
@@ -62,23 +62,33 @@
         </tr>
         <tr>
             <td>result</td>
-            <td>Json</td>
-            <td>城市列表</td>
+            <td>Object</td>
+            <td>返回结果信息</td>
         </tr>
         <tr>
-            <td>result[i].pid</td>
-            <td>Int</td>
-            <td>省份ID</td>
-        </tr>
-        <tr>
-            <td>result[i].id</td>
-            <td>Int</td>
-            <td>城市ID</td>
-        </tr>
-        <tr>
-            <td>result[i].name</td>
+            <td>result.version</td>
             <td>String</td>
-            <td>城市名字</td>
+            <td>版本号</td>
+        </tr>
+        <tr>
+            <td>result.upgrade_instructions </td>
+            <td>String</td>
+            <td>升级说明</td>
+        </tr>
+        <tr>
+            <td>result.download_url</td>
+            <td>String</td>
+            <td>下载地址</td>
+        </tr>
+        <tr>
+            <td>result.mandatory</td>
+            <td>Bool</td>
+            <td>是否强制升级</td>
+        </tr>
+        <tr>
+            <td>result.upgrade_date</td>
+            <td>String</td>
+            <td>版本发布日期,格式为：yyyy-MM-dd</td>
         </tr>
     </table>
 </div>

@@ -1,10 +1,10 @@
 <div class="hero-unit">
-    <h4 class="api_main_intro">搜索店铺</h4>
+    <h4 class="api_main_intro">获取商品评价</h4>
     <div class="well">
-        搜索店铺
+        在交易完成之后，用户可以提交评价。
     </div>
     <h5>1.接口说明</h5>
-    <div>根据关键字搜索店铺</div>
+    <div>在交易完成之后，用户可以提交评价。</div>
     <h5>2.应用场景</h5>
     <h5>3.接口调用说明</h5>
     <h6>3.1 请求说明</h6>
@@ -20,7 +20,7 @@
         <tr>
             <td>请求方式</td>
             <td>GET</td>
-        </tr>        
+        </tr>
     </table>
     <h6>3.2 请求参数说明</h6>
     <table class="table table-bordered table-striped">
@@ -34,13 +34,13 @@
             <td>method</td>
             <td>String</td>
             <td>是</td>
-            <td>固定为shop.search</td>
+            <td>固定为trade.evaluation_list</td>
         </tr>
         <tr>
-            <td>key</td>
-            <td>String</td>
+            <td>product_id</td>
+            <td>Int</td>
             <td>是</td>
-            <td>搜索关键字</td>
+            <td>商品Id。</td>
         </tr>
         <tr>
             <td>page_no</td>
@@ -75,32 +75,42 @@
         <tr>
             <td>result</td>
             <td>Object</td>
-            <td>返回结果</td>
+            <td>评论列表</td>
         </tr>
         <tr>
             <td>result.count</td>
             <td>Int</td>
-            <td>总的条数</td>
+            <td>评论总数</td>
+        </tr>
+        <tr>
+            <td>result.average</td>
+            <td>Double</td>
+            <td>商品平均得分。</td>
         </tr>
         <tr>
             <td>result.list</td>
-            <td>Object</td>
-            <td>结果列表</td>
+            <td>Array</td>
+            <td>评价列表。</td>
         </tr>
         <tr>
-            <td>result.list[i].id</td>
+            <td>result.list[i].score</td>
             <td>Int</td>
-            <td>店铺ID</td>
+            <td>综合得分。</td>
         </tr>
         <tr>
-            <td>result.list[i].sub</td>
+            <td>result.list[i].content</td>
             <td>String</td>
-            <td>店铺二级域名</td>
+            <td>评价内容。</td>
         </tr>
         <tr>
-            <td>result.list[i].name</td>
+            <td>result.list[i].user_name</td>
             <td>String</td>
-            <td>店铺名称</td>
+            <td>评价人，提供部分信息。</td>
+        </tr>
+        <tr>
+            <td>result.list[i].create_on</td>
+            <td>String</td>
+            <td>评价时间：格式为yyyy-MM-dd。</td>
         </tr>
     </table>
 </div>

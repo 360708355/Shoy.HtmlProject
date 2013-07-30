@@ -50,14 +50,21 @@
                         <li><a href="#">shop.search</a></li>
                         <li><a href="#">shop.push</a></li>
                         <li class="nav-header">交易接口</li>
-                        <li><a href="#">trade.provinces</a></li>
-                        <li><a href="#">trade.cities</a></li>
-                        <li><a href="#">trade.receivers</a></li>
-                        <li><a href="#">trade.expresses</a></li>
-                        <li><a href="#">trade.add_cart</a></li>
-                        <li><a href="#">trade.generate_orders</a></li>
-                        <li><a href="#">trade.search_orders</a></li>
-                        <li class="nav-header">其他说明</li>
+                        <li><a href="#">trade.province_list</a></li>
+                        <li><a href="#">trade.city_list</a></li>
+                        <li><a href="#">trade.receiver_list</a></li>
+                        <li><a href="#">trade.receiver_add</a></li>
+                        <li><a href="#">trade.express_list</a></li>
+                        <li><a href="#">trade.cart_add</a></li>
+                        <li><a href="#">trade.cart_list</a></li>
+                        <li><a href="#">trade.orders_generate</a></li>
+                        <li><a href="#">trade.orders_search</a></li>
+                        <li><a href="#">trade.orders_item</a></li>
+                        <li><a href="#">trade.evaluation_add</a></li>
+                        <li><a href="#">trade.evaluation_list</a></li>
+                        <li class="nav-header">其他接口</li>
+                        <li><a href="#">other.version_detected</a></li>
+                        <li class="nav-header">接口说明</li>
                         <li api_name="api_paras"><a href="#">系统级参数</a></li>
                         <li api_name="api_sign"><a href="#">签名验证</a></li>
                     </ul>
@@ -81,6 +88,7 @@
                 $.get("apiTools/"+api_name+".html",
                     {},function(data){
                         $(".d_api-con").html(data);
+                        $(document).scrollTop(0);
                     }
                 ,"html");
             }
