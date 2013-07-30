@@ -1,10 +1,10 @@
 <div class="hero-unit">
-    <h4 class="api_main_intro">用户信息</h4>
+    <h4 class="api_main_intro">第三方登录</h4>
     <div class="well">
-        用户信息
+        第三方登录
     </div>
     <h5>1.接口说明</h5>
-    <div>/// 获取用户详细信息</div>
+    <div>/// 仅支持会员登录</div>
     <h5>2.应用场景</h5>
     <h5>3.接口调用说明</h5>
     <h6>3.1 请求说明</h6>
@@ -19,7 +19,7 @@
         </tr>
         <tr>
             <td>请求方式</td>
-            <td>GET</td>
+            <td>POST</td>
         </tr>        
     </table>
     <h6>3.2 请求参数说明</h6>
@@ -34,13 +34,13 @@
             <td>method</td>
 			<td>String</td>
 			<td>是</td>
-            <td>固定为：user.info</td>
+            <td>固定为：user.login_third</td>
         </tr>
         <tr>
-            <td>ticket</td>
+            <td>open_id</td>
 			<td>String</td>
 			<td>是</td>
-            <td>登录凭证</td>
+            <td>第三方反馈登录唯一标识</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
@@ -53,7 +53,7 @@
         <tr>
             <td>state</td>
 			<td>Int</td>
-            <td>状态</td>
+            <td>状态：0失败、1成功</td>
         </tr>
         <tr>
             <td>msg</td>
@@ -68,47 +68,12 @@
         <tr>
             <td>result.utype</td>
 			<td>Int</td>
-            <td>类型：1会员、2加盟商</td>
+            <td>用户类型：1会员</td>
         </tr>
         <tr>
-            <td>result.name</td>
+            <td>result.ticket</td>
 			<td>String</td>
-            <td>登录帐号</td>
-        </tr>
-        <tr>
-            <td>result.realname</td>
-			<td>String</td>
-            <td>真实姓名</td>
-        </tr>
-        <tr>
-            <td>result.money</td>
-			<td>Double</td>
-            <td>余额</td>
-        </tr>
-        <tr>
-            <td>result.baifub</td>
-			<td>Double</td>
-            <td>百福币 [商家]</td>
-        </tr>
-        <tr>
-            <td>result.coupon</td>
-			<td>Double</td>
-            <td>代金券 [会员]</td>
-        </tr>
-        <tr>
-            <td>result.grade</td>
-			<td>Int</td>
-            <td>商城等级 [商家]</td>
-        </tr>
-        <tr>
-            <td>result.mobile</td>
-			<td>String</td>
-            <td>手机号</td>
-        </tr>
-        <tr>
-            <td>result.qq</td>
-			<td>String</td>
-            <td>QQ号</td>
+            <td>登录凭证</td>
         </tr>
     </table>
 </div>
