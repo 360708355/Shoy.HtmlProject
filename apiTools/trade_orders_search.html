@@ -34,7 +34,7 @@
             <td>method</td>
             <td>String</td>
             <td>是</td>
-            <td>固定为：trade.orders_search</td>
+            <td>固定为：trade.orders.search</td>
         </tr>
         <tr>
             <td>ticket</td>
@@ -43,10 +43,16 @@
             <td>用户令牌，包含登录后的用户信息，登录时获取。</td>
         </tr>
         <tr>
-            <td>order_num</td>
+            <td>order_type</td>
+            <td>Int</td>
+            <td>否</td>
+            <td>订单类型：默认为0，全部；1为会员；12为商家</td>
+        </tr>
+        <tr>
+            <td>order_status</td>
             <td>String</td>
             <td>是</td>
-            <td>订单编号，长度为14位</td>
+            <td>订单状态,多个以,分割，若其中包含-10,则其他的无效：-10，全部；-2：未支付，-1：用户取消，0：未处理；1：正在备货；2：审核失败；3：已经发货；4：发货失败；5：交易完成。</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>

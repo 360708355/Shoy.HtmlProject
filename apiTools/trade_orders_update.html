@@ -1,10 +1,10 @@
 <div class="hero-unit">
-    <h4 class="api_main_intro">获取城市信息</h4>
+    <h4 class="api_main_intro">更新订单状态</h4>
     <div class="well">
-        获取对应省份的城市信息
+        更新订单状态，目前主要用于取消订单、确认收货。
     </div>
     <h5>1.接口说明</h5>
-    <div>获取对应省份的城市信息</div>
+    <div>更新订单状态，目前主要用于取消订单、确认收货。</div>
     <h5>2.应用场景</h5>
     <h5>3.接口调用说明</h5>
     <h6>3.1 请求说明</h6>
@@ -19,7 +19,7 @@
         </tr>
         <tr>
             <td>请求方式</td>
-            <td>GET</td>
+            <td>POST</td>
         </tr>
     </table>
     <h6>3.2 请求参数说明</h6>
@@ -34,13 +34,25 @@
             <td>method</td>
             <td>String</td>
             <td>是</td>
-            <td>固定为：trade.city.list</td>
+            <td>固定为：trade.orders.update</td>
         </tr>
         <tr>
-            <td>province_id</td>
+            <td>ticket</td>
+            <td>String</td>
+            <td>是</td>
+            <td>用户令牌，包含登录后的用户信息，登录时获取。</td>
+        </tr>
+        <tr>
+            <td>order_num</td>
+            <td>String</td>
+            <td>是</td>
+            <td>订单编号，长度为14位</td>
+        </tr>
+        <tr>
+            <td>status_code</td>
             <td>Int</td>
             <td>是</td>
-            <td>省份ID</td>
+            <td>新订单状态：-1为取消订单；5为确认收货。</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
@@ -59,26 +71,6 @@
             <td>msg</td>
             <td>String</td>
             <td>错误信息</td>
-        </tr>
-        <tr>
-            <td>result</td>
-            <td>Json</td>
-            <td>城市列表</td>
-        </tr>
-        <tr>
-            <td>result[i].pid</td>
-            <td>Int</td>
-            <td>省份ID</td>
-        </tr>
-        <tr>
-            <td>result[i].id</td>
-            <td>Int</td>
-            <td>城市ID</td>
-        </tr>
-        <tr>
-            <td>result[i].name</td>
-            <td>String</td>
-            <td>城市名字</td>
         </tr>
     </table>
 </div>
