@@ -1,9 +1,14 @@
 <div class="hero-unit">
-    <h4 class="api_main_intro">商品列表</h4>
+    <h4 class="api_main_intro">获取分类层级</h4>
     <div class="well">
-        商品列表
+        指定分类Id获取出对应的1、2、3及分类
     </div>
     <h5>1.接口说明</h5>
+	<div>
+        /// 深度必须介于0-2之间<br/>
+        /// 已指定父级分类id，深度无效<br/>
+        /// 已指定分类Id，父级分类无效
+	</div>
     <h5>2.应用场景</h5>
     <h5>3.接口调用说明</h5>
     <h6>3.1 请求说明</h6>
@@ -14,7 +19,7 @@
         </tr>
         <tr>
             <td>格式</td>
-            <td>JSON</td>
+            <td>Object</td>
         </tr>
         <tr>
             <td>请求方式</td>
@@ -33,31 +38,13 @@
             <td>method</td>
 			<td>String</td>
 			<td>是</td>
-            <td>固定为：product.list</td>
+            <td>固定为：category.flow</td>
         </tr>
         <tr>
             <td>cate_id</td>
 			<td>Int</td>
 			<td>是</td>
-            <td>分类Id</td>
-        </tr>
-        <tr>
-            <td>orderby</td>
-			<td>Int</td>
-			<td>否</td>
-            <td>排序方式：0销量降序（默认）、1销量升序、2价格降序、3价格升序</td>
-        </tr>
-        <tr>
-            <td>page_no</td>
-			<td>Int</td>
-			<td>是</td>
-            <td>当前页码，默认1</td>
-        </tr>
-        <tr>
-            <td>page_size</td>
-			<td>Int</td>
-			<td>是</td>
-            <td>每页显示数量，默认25</td>
+            <td>指定分类Id</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
@@ -70,7 +57,7 @@
         <tr>
             <td>state</td>
 			<td>Int</td>
-            <td>状态</td>
+            <td>状态：0失败、1成功</td>
         </tr>
         <tr>
             <td>msg</td>
@@ -80,52 +67,45 @@
         <tr>
             <td>result</td>
 			<td>Object</td>
-            <td>返回结果</td>
-        </tr>
+            <td>返回结果对象</td>
+        </tr>		
         <tr>
-            <td>result.count</td>
+            <td>result.depth</td>
 			<td>Int</td>
-            <td>总的条数</td>
-        </tr>
-        <tr>
-            <td>result.list</td>
-			<td>Json</td>
-            <td>结果列表,按销量降序排列</td>
-        </tr>
-        <tr>
-            <td>result.list[i].id</td>
-			<td>Int</td>
-            <td>ID</td>
-        </tr>
-        <tr>
-            <td>result.list[i].num</td>
-			<td>String</td>
-            <td>货号</td>
-        </tr>
-        <tr>
-            <td>result.list[i].name</td>
-			<td>String</td>
-            <td>名称</td>
-        </tr>
-        <tr>
-            <td>result.list[i].pictures</td>
-			<td>Array</td>
             <td>
-			图片路径：<br/>
-			result.list[i].pictures[0]为120X120,<br/>
-			result.list[i].pictures[1]为160X160,<br/>
-			result.list[i].pictures[2]为300X300
+			当前分类级别：0一级、1二级、2三级。<br/>
+			注：如果当前分类级别为0，则二三级分类没有数据，id默认0、名称默认空字符串。
 			</td>
         </tr>
         <tr>
-            <td>result.list[i].price</td>
-			<td>Double</td>
-            <td>会员价</td>
+            <td>result.c1_id</td>
+			<td>Int</td>
+            <td>一级分类ID</td>
         </tr>
         <tr>
-            <td>result.list[i].price_market</td>
-			<td>Double</td>
-            <td>市场价</td>
+            <td>result.c1_name</td>
+			<td>String</td>
+            <td>一级分类名称</td>
+        </tr>
+        <tr>
+            <td>result.c2_id</td>
+			<td>Int</td>
+            <td>二级分类ID</td>
+        </tr>
+        <tr>
+            <td>result.c2_name</td>
+			<td>String</td>
+            <td>二级分类名称</td>
+        </tr>
+        <tr>
+            <td>result.c3_id</td>
+			<td>Int</td>
+            <td>三级分类ID</td>
+        </tr>
+        <tr>
+            <td>result.c3_name</td>
+			<td>String</td>
+            <td>三级分类名称</td>
         </tr>
     </table>
 </div>

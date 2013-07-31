@@ -1,7 +1,7 @@
 <div class="hero-unit">
     <h4 class="api_main_intro">商品详细</h4>
     <div class="well">
-        商品列表
+        商品详细信息
     </div>
     <h5>1.接口说明</h5>
 	<div>
@@ -89,9 +89,22 @@
             <td>名称</td>
         </tr>
         <tr>
-            <td>result.pic_160</td>
-			<td>String</td>
-            <td>图片路径</td>
+            <td>result.pictures</td>
+			<td>Array</td>
+            <td>
+			图片路径：<br/>
+			result.pictures[0]为120X120,<br/>
+			result.pictures[1]为160X160,<br/>
+			result.pictures[2]为300X300
+			</td>
+        </tr>
+        <tr>
+            <td>result.pic_big</td>
+			<td>Array</td>
+            <td>
+			多首图：固定300X300，目前仅有1张首图，后续扩展<br/>
+			result.pic_big[0]
+			</td>
         </tr>
         <tr>
             <td>result.price_market</td>
@@ -101,7 +114,12 @@
         <tr>
             <td>result.price</td>
 			<td>Double</td>
-            <td>会员价/VIP价 [根据登录凭证返回]</td>
+            <td>会员价</td>
+        </tr>
+        <tr>
+            <td>result.price_vip</td>
+			<td>Double</td>
+            <td>VIP价 [仅商家登录有值]</td>
         </tr>
         <tr>
             <td>result.brand_name</td>
