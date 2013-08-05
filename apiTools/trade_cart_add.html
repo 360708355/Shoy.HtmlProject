@@ -40,7 +40,7 @@
             <td>ticket</td>
             <td>String</td>
             <td>否</td>
-            <td>用户令牌，包含登录后的用户信息，登录时获取。未登录用户为空。</td>
+            <td>登录凭证，包含登录后的用户信息，登录时获取。未登录用户为空。</td>
         </tr>
         <tr>
             <td>product_id</td>
@@ -106,12 +106,12 @@
         </tr>
         <tr>
             <td>result.price</td>
-            <td>Float</td>
+            <td>Double</td>
             <td>会员价</td>
         </tr>
         <tr>
             <td>result.price_vip</td>
-            <td>Float</td>
+            <td>Double</td>
             <td>vip价，商家登录后，才能获取</td>
         </tr>
         <tr>
@@ -127,7 +127,11 @@
         <tr>
             <td>result.pictures</td>
             <td>Array</td>
-            <td>商品图片列表：result.pictures[0]为50X50,result.pictures[1]为90X90,result.pictures[2]为120X120</td>
+            <td>商品图片列表： <br />
+                result.pictures[0]为120X120 <br />
+                result.pictures[1]为160X160 <br />
+                result.pictures[2]为300X300
+            </td>
         </tr>
     </table>
 </div>

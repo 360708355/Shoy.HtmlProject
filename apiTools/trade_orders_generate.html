@@ -40,7 +40,7 @@
             <td>ticket</td>
             <td>String</td>
             <td>是</td>
-            <td>用户令牌，包含登录后的用户信息，登录时获取。</td>
+            <td>登录凭证，包含登录后的用户信息，登录时获取。</td>
         </tr>
         <tr>
             <td>receiver_name</td>
@@ -134,13 +134,18 @@
         </tr>
         <tr>
             <td>result</td>
-            <td>Json</td>
+            <td>Object</td>
             <td>返回结果</td>
         </tr>
         <tr>
             <td>result.charge_id</td>
             <td>Int</td>
             <td>订单交易号，不同于订单编号，一个交易号可包含多个订单编号。</td>
+        </tr>
+        <tr>
+            <td>result.order_nums</td>
+            <td>Array</td>
+            <td>订单编号，数据对象。</td>
         </tr>
     </table>
 </div>
