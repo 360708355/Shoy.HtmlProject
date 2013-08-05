@@ -78,7 +78,7 @@
         </tr>
         <tr>
             <td>result</td>
-			<td>Object</td>
+			<td>Json</td>
             <td>返回结果，数组对象</td>
         </tr>
         <tr>
@@ -100,6 +100,21 @@
             <td>result[i].parentid</td>
 			<td>Int</td>
             <td>父级ID</td>
+        </tr>
+		<tr>
+            <td>result[i].recoms</td>
+			<td>Json</td>
+            <td>推荐分类数组，仅一级分类有值</td>
+        </tr>
+		<tr>
+            <td>result[i].recoms[i].id</td>
+			<td>Int</td>
+            <td>推荐分类Id</td>
+        </tr>
+		<tr>
+            <td>result[i].recoms[i].name</td>
+			<td>String</td>
+            <td>推荐分类名称</td>
         </tr>
     </table>
 </div>
