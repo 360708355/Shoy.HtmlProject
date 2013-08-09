@@ -1,10 +1,10 @@
 <div class="hero-unit">
-    <h4 class="api_main_intro">第三方登录</h4>
+    <h4 class="api_main_intro">检测帐号是否可以使用</h4>
     <div class="well">
-        第三方登录
+        检测帐号是否可以使用，主要用于注册、第三方登录后绑定帐号
     </div>
     <h5>1.接口说明</h5>
-    <div>/// 仅支持会员登录</div>
+    <div>/// 仅支持会员</div>
     <h5>2.应用场景</h5>
     <h5>3.接口调用说明</h5>
     <h6>3.1 请求说明</h6>
@@ -34,25 +34,13 @@
             <td>method</td>
 			<td>String</td>
 			<td>是</td>
-            <td>固定为：user.login.third</td>
+            <td>固定为：user.login.check.name</td>
         </tr>
         <tr>
-            <td>open_id</td>
+            <td>name</td>
 			<td>String</td>
 			<td>是</td>
-            <td>第三方反馈登录唯一标识</td>
-        </tr>
-        <tr>
-            <td>nick_name</td>
-			<td>String</td>
-			<td>是</td>
-            <td>昵称</td>
-        </tr>
-        <tr>
-            <td>open_type</td>
-			<td>Int</td>
-			<td>是</td>
-            <td>第三方平台类型：101支付宝、102新浪微博、103腾讯QQ、104腾讯微博</td>
+            <td>帐号</td>
         </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
@@ -65,27 +53,12 @@
         <tr>
             <td>state</td>
 			<td>Int</td>
-            <td>状态：0失败、1成功</td>
+            <td>状态：0失败、1成功，可以使用</td>
         </tr>
         <tr>
             <td>msg</td>
 			<td>String</td>
-            <td>错误信息</td>
-        </tr>
-        <tr>
-            <td>result</td>
-			<td>Object</td>
-            <td>返回结果</td>
-        </tr>
-        <tr>
-            <td>result.utype</td>
-			<td>Int</td>
-            <td>用户类型：1会员</td>
-        </tr>
-        <tr>
-            <td>result.ticket</td>
-			<td>String</td>
-            <td>登录凭证</td>
+            <td>提示信息</td>
         </tr>
     </table>
 </div>

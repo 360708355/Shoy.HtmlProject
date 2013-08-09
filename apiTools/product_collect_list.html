@@ -44,6 +44,18 @@
 			<td>是</td>
             <td>登录凭证</td>
         </tr>
+        <tr>
+            <td>page_no</td>
+			<td>Int</td>
+			<td>是</td>
+            <td>当前页码，默认1</td>
+        </tr>
+        <tr>
+            <td>page_size</td>
+			<td>Int</td>
+			<td>是</td>
+            <td>每页显示数量，默认25</td>
+        </tr>
     </table>
     <h6>3.3 返回参数说明</h6>
     <table class="table table-bordered table-striped">
@@ -93,9 +105,14 @@
             <td>名称</td>
         </tr>
         <tr>
-            <td>result.list[i].pic_160</td>
+            <td>result.list[i].pictures</td>
 			<td>String</td>
-            <td>图片路径</td>
+            <td>
+			图片路径<br/>
+			result.list[i].pictures[0]为120X120,<br/>
+			result.list[i].pictures[1]为160X160,<br/>
+			result.list[i].pictures[2]为300X300 
+			</td>
         </tr>
         <tr>
             <td>result.list[i].price</td>
