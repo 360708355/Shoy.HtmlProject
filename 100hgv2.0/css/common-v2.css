@@ -52,7 +52,7 @@
     width: 100px;
     overflow: hidden;
 }
-.f01-1d .h-notice span,.f01-1d .notice{
+.f01-1d .h-notice-ipm span,.f01-1d .notice{
     float: left;
 }
 .f01-1d .notice dl{
@@ -98,44 +98,6 @@
     -ms-transform:rotate(180deg);
     -o-transform:rotate(180deg);
     transform:rotate(180deg);
-}
-@-moz-keyframes swing {
-    20% {
-        transform: rotate(15deg);
-    }
-    40% {
-        transform: rotate(-10deg);
-    }
-    60% {
-        transform: rotate(5deg);
-    }
-    80% {
-        transform: rotate(-5deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-@-moz-keyframes swing {
-    20% {
-        transform: rotate(15deg);
-    }
-    40% {
-        transform: rotate(-10deg);
-    }
-    60% {
-        transform: rotate(5deg);
-    }
-    80% {
-        transform: rotate(-5deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-.hover .h-cate .icon{
-    animation: 1s ease 0s normal none 1 swing;
-    transform-origin: center top 0;
 }
 .hover .outline{
     top:3px;
@@ -615,9 +577,14 @@
     width: 20px;
     height: 15px;
 }
-
-.f04{
-    height: 442px;
+.h-price{
+    color: #E94E4E;
+    font-family: Arial;
+    font-size: 12px;
+}
+.h-price b{
+    font-size: 14px;
+    margin-left: 2px;
 }
 
 /*

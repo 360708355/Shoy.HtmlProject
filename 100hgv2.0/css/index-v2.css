@@ -1,12 +1,13 @@
+.f04{
+    height: 435px;
+    margin-bottom: 15px;
+}
 .f04-main{
     padding: 6px 0 0 216px;
 }
 .f04-1d{
     padding-left: 10px;
-    position: relative;
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
+    float: left;
 }
 .h-sliderA{
     width: 514px;
@@ -40,8 +41,6 @@
 }
 .h-sliderA .dsFollowSlide-navi li{
     display: inline-block;
-    *display: inline;
-    *zoom: 1;
 }
 .h-sliderA .dsFollowSlide-navi a{
     color: #ffffff;
@@ -68,7 +67,7 @@
 }
 .h-sliderB{
     width: 514px;
-    height: 134px;
+    height: 130px;
     overflow: hidden;
 }
 .h-sliderB li{
@@ -121,6 +120,150 @@
     width: 17px;
     height: 23px;
 }
+.f04-2d{
+    position: relative;
+    float: right;
+}
+.h-notice{
+    border: 1px solid #CCCCCC;
+    width: 230px;
+    height: 310px;
+    position: relative;
+}
+.n-header{
+    background-color: #F5F5F5;
+    border: none;
+    border-bottom: solid 1px #CCCCCC;
+    border-left: solid 1px #CCCCCC;
+    width: 76px;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+.n-header-first{
+    border-left: none;
+}
+.h-notice .current{
+    background-color: #FFFFFF;
+    border-bottom: none;
+    cursor: inherit;
+}
+.n-content{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    padding: 5px 0 0 0;
+    width: 230px;
+}
+.n-content li{
+    padding: 6px 3px;
+}
+.current .n-content{
+    display: block;
+    height: 280px;
+}
+.n-img{
+    float: left;
+    margin-top: 3px;
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+.n-name{
+    float: right;
+    width: 169px;
+    line-height: 18px;
+    height: 36px;
+    overflow: hidden;
+    display: block;
+}
+.n-price{
+    display: block;
+}
+.n-news{
+    padding: 4px 0 0;
+}
+.n-news li{
+    line-height: 27px;
+    padding: 0 25px;
+    position: relative;
+}
+.n-news li i {
+    background-color: #E94E4E;
+    display: block;
+    height: 3px;
+    width: 3px;
+    position: absolute;
+    top: 11px;
+    left: 17px;
+}
+.n-news li:nth-child(2n) {
+    background: none repeat scroll 0 0 #F4F4F4;
+}
+.h-recommend{
+    width: 230px;
+    height: 110px;
+    margin-top: 5px;
+    border: solid 1px #CCCCCC;
+}
+.f05,.f04-main{
+    overflow: hidden;
+}
+.f05{
+
+}
+.h-line01{
+    height: 3px;
+    background-color: #CCCCCC;
+    margin: 2px 0 10px 0;
+}
+.f05-1d{
+    float: left;
+    width: 738px;
+    height: 380px;
+}
+.h-promotion-header{
+    overflow: hidden;
+}
+.h-promotion-header h2{
+    display: inline-block;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 120px;
+    margin-right: 10px;
+    text-align: center;
+}
+.h-promotion{
+    height: 340px;
+    border: solid 1px #CCCCCC;
+}
+.f05-2d{
+    float: right;
+    width: 230px;
+    height: 380px;
+}
+.h-latest-header{
+    line-height: 22px;
+}
+.h-latest-header h2{
+    font-size: 14px;
+    font-weight: bold;
+}
+.h-latest-box{
+    height: 340px;
+    overflow: hidden;
+    position: relative;
+    border: solid 1px #CCCCCC;
+}
+.h-latest-box iframe{
+    height: 340px;
+}
 
 /*
     宽屏处理
@@ -133,4 +276,7 @@
 }
 .wideMode .h-sliderB img{
     width: 187px;
+}
+.wideMode .f05-1d{
+    width: 977px;
 }
