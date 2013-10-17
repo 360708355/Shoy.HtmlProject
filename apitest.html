@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>api接口测试</title>
+    <link rel="stylesheet" href="http://fed.www.100hg.com/bootstrap/css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" href="http://fed.www.100hg.com/bootstrap/css/bootstrap-responsive.min.css" media="all" />
+    <style type="text/css">
+        .page-header h3,.page-header h5{margin-left: 45px;}
+        textarea{width: 85%;}
+    </style>
+</head>
+<body>
+    <div class="page-header"><h3>API接口测试工具</h3></div>
+    <div class="span6">
+        <div class="well form-horizontal">
+            <div class="control-group">
+                <label class="control-label" for="">API类目</label>
+                <div class="controls">
+                    <select name="api-category" id="api-category">
+                        <option value="1">用户API</option>
+                        <option value="2">类目API</option>
+                        <option value="3">商品API</option>
+                        <option value="4">交易API</option>
+                        <option value="5">其他API</option>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="">API</label>
+                <div class="controls">
+                    <select name="api-name" id="api-name">
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="">提交方式</label>
+                <div class="controls">
+                    <label class="radio inline">
+                        <input type="radio" name="api-method" checked="checked" />
+                        GET
+                    </label>
+                    <label class="radio inline">
+                        <input type="radio" name="api-method" />
+                        POST
+                    </label>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="">返回结果</label>
+                <div class="controls">
+                    <select name="api-result" id="api-result">
+                        <option value="">Json</option>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="">app key</label>
+                <div class="controls">
+                    <input type="text" class="input-medium" />
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="">app secret</label>
+                <div class="controls">
+                    <input type="text" class="input-big" />
+                </div>
+            </div>
+            <div class="page-header"><h5>接口参数</h5></div>
+            <div class="row">
+
+            </div>
+            <div class="form-actions">
+                <button class="btn btn-primary j_submit">提交测试</button>
+            </div>
+        </div>
+    </div>
+    <div class="span7">
+        <div class="well">
+            <div class="page-header">
+                <h4>参数提取</h4>
+            </div>
+            <div>
+                <textarea name="" id="" cols="40" rows="5"></textarea>
+            </div>
+            <div class="page-header">
+                <h4>返回结果</h4>
+            </div>
+            <div>
+                <textarea name="" id="" cols="40" rows="5"></textarea>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://fed.www.100hg.com/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+        var AjaxApi=function(method,data,callback){
+            var url="http://www.api.100hg.com/apitools/router";
+            method = (!method ? "GET":method);
+            data = $.extend({timer:Math.random()},data||{});
+            callback = ("function" === typeof callback ? callback:function(data){});
+            $.Ajax({
+                url:url,
+                method:method,
+                dataType:"JSON",
+                data:data,
+                success:function(data){
+                    callback(data);
+                },
+                error:function(a,b){
+                    console.log(a+b);
+                }
+            });
+        }
+        var apiTools={};
+        apiTools.getApi=function(){
+            var cid=$("#api-category option:selected").val();
+            if(cid<=0) return;
+            AjaxApi("",{action:getApi,cid:cid},function(data){
+                if(data.length>0){
+                    var $api=$("#api-name");
+                    $api.find("option").remove();
+                    for(var i=0;i<data.length;i++){
+                        $api.append('<option>'+data[i].name+'</option>');
+                    }
+                }
+            });
+        };
+        apiTools.getMethod=function(){
+
+        };
+        $(document)
+            .ready(function(){
+
+            })
+            .delegate(".j_submit","click",function(){
+
+            })
+        ;
+    </script>
+</body>
+</html>

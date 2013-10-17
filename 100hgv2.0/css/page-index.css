@@ -1,0 +1,136 @@
+.f04-main{
+    padding: 6px 0 0 216px;
+}
+.f04-1d{
+    padding-left: 10px;
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+.h-sliderA{
+    width: 514px;
+    height: 300px;
+    overflow: hidden;
+}
+.h-sliderA li{
+    display: inline;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.h-sliderA .dsFollowSlide-con a{
+    height: 300px;
+    overflow: hidden;
+    display: block;
+}
+.h-sliderA .dsFollowSlide-view{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.h-sliderA .dsFollowSlide-con{
+    position: absolute;
+}
+.h-sliderA .dsFollowSlide-navi{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.h-sliderA .dsFollowSlide-navi li{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+.h-sliderA .dsFollowSlide-navi a{
+    color: #ffffff;
+    width: 22px;
+    height: 15px;
+    line-height: 15px;
+    margin: 0 0 0 3px;
+    background-color: #333;
+    border: 1px solid #FFFFFF;
+    display: block;
+    text-align: center;
+    opacity: .75;
+    filter:alpha(opacity=75);
+    position: relative;
+}
+.h-sliderA a:hover{
+    text-decoration: none;
+}
+.h-sliderA .dsFollowSlide-navi .current a{
+    background-color: #E94E4E;
+}
+.h-sliderA img{
+    margin: 0 0 0 -120px;
+}
+.h-sliderB{
+    width: 514px;
+    height: 130px;
+    overflow: hidden;
+}
+.h-sliderB li{
+    float: left;
+    position: relative;
+}
+.h-sliderB .s-unit{
+    width: 514px;
+    overflow: hidden;
+}
+.h-sliderB .s-unit ul{
+    display: block;
+    clear: both;
+}
+.h-sliderB .s-unit li{
+    height: 129px;
+    border-right: 1px solid #CCCCCC;
+    border-bottom: solid 1px #CCCCCC;
+}
+.h-sliderB .s-unit .s-frt{
+    border-left: solid 1px #CCCCCC;
+}
+.h-sliderB .s-unit a{
+    display: block;
+}
+.h-sliderB img{
+    width: 170px;
+    height: 129px;
+}
+.h-sliderB .s-prev,.h-sliderB .s-next{
+    background: url(../img/common-v2.png) no-repeat;
+}
+.h-sliderB .s-prev{
+    background-position: -107px -63px;
+    left: 4px;
+}
+.h-sliderB .s-prev:hover{
+    background-position: -91px -63px;
+}
+.h-sliderB .s-next{
+    background-position: -140px -63px;
+    right: 4px;
+}
+.h-sliderB .s-next:hover{
+    background-position: -124px -63px;
+}
+.h-sliderB .s-prev,.h-sliderB .s-next{
+    position: absolute;
+    top: 55px;
+    width: 17px;
+    height: 23px;
+}
+
+/*
+    宽屏处理
+*/
+.wideMode .h-sliderA,.wideMode .h-sliderB,.wideMode .h-sliderB .s-unit{
+    width: 754px;
+}
+.wideMode .h-sliderA img{
+    margin-left: 0;
+}
+.wideMode .h-sliderB img{
+    width: 187px;
+}

@@ -15,6 +15,7 @@
         }
         .nav-header{font-size: 16px;}
         .navbar-inverse .brand{color:#fff;}
+        .con-mask{ height: 200px; text-align: center; font-size: 15px; font-weight: bold;}
     </style>
 </head>
 <body>
@@ -85,6 +86,7 @@
     <script type="text/javascript">
         var $navs=$(".nav-list li").not(".nav-header");
         var get_desc=function(navObj){
+            $(".d_api-con").html('<div class="con-mask">努力加载中..</div>');
             var $nav=$(navObj);
             $navs.removeClass("active");
             $nav.addClass("active");
