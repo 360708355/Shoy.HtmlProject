@@ -1,6 +1,16 @@
-.fl i,.h-phone,.h-personal,.h-cart,.h-logo,.cert-01,.cert-02,.cert-03,.cert-04,.f01-2d li i,
+/* .fl i,.h-phone,.h-personal,.h-cart,.h-logo,.cert-01,.cert-02,.cert-03,.cert-04,.f01-2d li i,
 .f-2d,.h-cart s,.h-personal i,.hover .cart-s,.h-cart .count,.h-search s,.cart-empty,.h-cate-bottom s,
 .c-icon01,.c-icon02,.c-icon03,.c-icon04,.c-icon05,.c-icon06,.c-icon07,.c-icon08,.h-cate s{
     background: none;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='../img/common-v2.png')
-}
+} */
+.c-icon01,.c-icon02,.c-icon03,.c-icon04,.c-icon05,.c-icon06,.c-icon07,.c-icon08{left: -25px;}
+.c-icon05{left: -25px;}
+.h-cate{margin-right: 1px;}
+.h-cate-bottom s{ top:0px;left: -30px;}
+.f04-main{padding: 6px 0 0 0px; margin-left: 216px;}
+.f04-1d{ float: left;}
+.f04-1d{z-index: -1;}
+.f01-2d li i{background-position:-59px -70px;top: 9px;}
+.f01-2d li s{ border: none;}
+.h-personal i{  background-position: -2px -61px;height: 5px;width: 10px;}
