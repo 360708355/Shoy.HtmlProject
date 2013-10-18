@@ -108,3 +108,24 @@
     -o-animation-name: swing;
     animation-name: swing
 }
+.hg-shortcut i,.f02-3d i{
+    -webkit-transform:0.3s ease-in;
+    -moz-transform:0.3s ease-in;
+    -ms-transform:0.3s ease-in;
+    -o-transform:0.3s ease-in;
+    transition:0.3s ease-in;
+}
+.f01-1d .fav:hover i{
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+    transform:rotate(360deg);
+}
+.hover i{
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+    -o-transform:rotate(180deg);
+    transform:rotate(180deg);
+}

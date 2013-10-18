@@ -25,4 +25,16 @@ $(document)
             $this.next().removeClass("none");
         }
     })
+    .delegate(".j_tab","mouseover",function(){
+        var $fore = $(this).parent();
+        if(!$fore.hasClass("current")){
+            $fore.siblings().removeClass("current");
+            var index = parseInt($fore.data("index"));
+            $(".f05-1d .h-arrow").animate({
+                left:178*index
+            },"fast",function(){
+                $fore.addClass("current");
+            });
+        }
+    })
 ;
