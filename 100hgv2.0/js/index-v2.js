@@ -36,7 +36,6 @@ $(document)
         var $fore = $(this).parent();
         if(!$fore.hasClass("current")){
             h_timer && clearTimeout(h_timer);
-            $fore.siblings().removeClass("current");
             var index = parseInt($fore.data("index"));
             var w = $(this).width();
             var $a = $fore.siblings(".h-arrow");
@@ -44,6 +43,7 @@ $(document)
                 left:w*index
             },200);
             h_timer=setTimeout(function(){
+                $fore.siblings().removeClass("current");
                 $fore.addClass("current");
             },160);
         }
