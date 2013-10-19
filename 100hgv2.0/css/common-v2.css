@@ -3,6 +3,13 @@
     margin-right: auto;
     width: 980px;
 }
+.not-support{
+    line-height: 30px;
+    background-color: #F5F5F5;
+    color: #ff6666;
+    text-align: center;
+    border-bottom: solid 1px #CCCCCC;
+}
 .hg-shortcut{
     background-color: #F5F5F5;
     height: 30px;
@@ -568,10 +575,11 @@
 .h-price{
     color: #E94E4E;
     font-family: Arial;
-    font-size: 12px;
+    font-size: 11px;
 }
 .h-price b{
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: bold;
     margin-left: 2px;
 }
 

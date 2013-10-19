@@ -1,4 +1,13 @@
 window.huge = window.huge || {};
+/*
+*/
+if (window.ActiveXObject) {
+    var ua = navigator.userAgent.toLowerCase();
+    var ie=ua.match(/msie ([\d.]+)/)[1];
+    if(ie==6.0){
+        document.write('<div class="not-support">百货购商城从2013年11月1日已停止对IE6的支持，请升级您的浏览器以获得更好更安全的购物体验。</div>');
+    }
+}
 huge.wideMode=(function(){
     return screen.width >= 1220
 })();

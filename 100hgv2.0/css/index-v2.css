@@ -223,9 +223,41 @@
     margin: 0 0 10px 0;
 }
 .h-title h2{
+    width: 90px;
+    margin: 0 auto;
+    line-height: 20px;
+    height: 20px;
+    position: relative;
     font-size: 14px;
     font-family: "Microsoft YaHei";
     font-weight: bold;
+    z-index: 10;
+}
+.h-arrow{
+    border-bottom:solid 2px #E94E4E;
+    position: absolute;
+    height: 25px;
+    top: 0;
+    width: 178px;
+    left: 0;
+    z-index: 10;
+    text-align: center;
+}
+.h-arrow h2 {
+    background-color: #E94E4E;
+    height: 19px;
+    margin: 3px auto 0;
+    position: relative;
+    width: 50%;
+    z-index: -1;
+}
+.h-arrow b{
+    background-position: -73px -93px;
+    width: 12px;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    _height:2px;
 }
 .h-content{
 
@@ -242,44 +274,12 @@
     position: relative;
     padding-top: 37px;
 }
-.f05-1d .h-arrow{
-    border-bottom:solid 2px #E94E4E;
-    position: absolute;
-    height: 25px;
-    top: 0;
-    width: 178px;
-    left: 0;
-    z-index: 10;
-    text-align: center;
-}
-.h-arrow h2 {
-    background-color: #E94E4E;
-    height: 19px;
-    margin: 3px auto 0;
-    position: relative;
-    width: 120px;
-    z-index: -1;
-}
-.h-arrow b{
-    background-position: -73px -93px;
-    width: 12px;
-    height: 4px;
-    display: block;
-    margin: 0 auto;
-    _height:2px;
-}
 .f05-1d .current .h-title{
     color: #E94E4E;
-    border: none;
+    /*border: none;*/
 }
 .current .h-title h2{
-    width: 120px;
     color: #FFFFFF;
-    margin: 0 auto;
-    line-height: 20px;
-    height: 20px;
-    position: relative;
-    z-index: 10;
 }
 .f05-1d .h-content{
     display: none;
@@ -292,7 +292,7 @@
     text-align: center;
     top:0px;
     width: 178px;
-    z-index: 20;
+    /*z-index: 20;*/
 }
 .h-fore01 .h-title{
     left: 0;
@@ -303,9 +303,13 @@
 .h-fore03 .h-title{
     left: 356px;
 }
-.h-fore04 .h-title{
-    left: 534px;
+.f05-1d .h-title-last{
+    cursor: default;
+    border-bottom: solid 2px #999999;
     width: 204px;
+    position: absolute;
+    top: 25px;
+    left: 534px;
 }
 .f05-1d .h-content{
     border: solid 1px #CCCCCC;
@@ -319,6 +323,10 @@
     width: 230px;
     height: 384px;
     overflow: hidden;
+}
+.h-latest h2{
+    text-align:left;
+    width: auto;
 }
 .h-latest .h-content{
     height: 340px;
@@ -347,6 +355,6 @@
 .wideMode .f05-1d{
     width: 977px;
 }
-.wideMode .h-fore04 .h-title{
+.wideMode .f05-1d .h-title-last{
     width: 443px;
 }
