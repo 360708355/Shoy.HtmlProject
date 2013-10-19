@@ -456,7 +456,7 @@
     position: relative;
     z-index: 1;
 }
-.h-cate a{
+.h-cate-line a{
     display: block;
     line-height: 30px;
 }

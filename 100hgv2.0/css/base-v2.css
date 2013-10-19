@@ -104,6 +104,10 @@ header, nav, article, section, aside, hgroup, figure, figcaption, canvas, audio,
 .fl {
     float: left;
 }
+.ufl ul li {
+    float: left;
+}
+
 .fr {
     float: right;
 }
@@ -116,6 +120,7 @@ header, nav, article, section, aside, hgroup, figure, figcaption, canvas, audio,
 .cl {
     clear: left;
 }
+
 .cr {
     clear: right;
 }
@@ -311,4 +316,13 @@ header, nav, article, section, aside, hgroup, figure, figcaption, canvas, audio,
 }
 .mr20 {
     margin-right: 20px;
+}
+.em3{
+    height: 3em;
+}
+.em{
+    height: 1em;
+}
+.db{
+    display: block;
 }

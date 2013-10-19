@@ -13,6 +13,11 @@ $(document)
             prevHTML:'<a href="#" class="s-prev"></a>',
             nextHTML:'<a href="#" class="s-next"></a>'
         });
+        $(".h-sliderC").followSlide({
+            nHoldTime:6000,
+            bVertical:false,
+            bNumericNavi:true
+        })
     })
     .delegate(".n-header","click",function(){
         var $this = $(this);
