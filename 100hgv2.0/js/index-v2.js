@@ -1,3 +1,4 @@
+var h_timer;
 $(document)
     .ready(function(){
         $(".h-sliderA").followSlide({
@@ -13,13 +14,14 @@ $(document)
             prevHTML:'<a href="#" class="s-prev"></a>',
             nextHTML:'<a href="#" class="s-next"></a>'
         });
+        $(".n-news li:odd").css("background-color","#F4F4F4");
         $(".h-sliderC").followSlide({
             nHoldTime:6000,
             bVertical:false,
             bNumericNavi:true
-        })
+        });
     })
-    .delegate(".n-header","click",function(){
+    .delegate(".n-header","mouseover",function(){
         var $this = $(this);
         var current = $this.hasClass("current");
         if(!current){
@@ -30,16 +32,20 @@ $(document)
             $this.next().removeClass("none");
         }
     })
-    .delegate(".j_tab","mouseover",function(){
+    .delegate(".ht .h-title","mouseover",function(){
         var $fore = $(this).parent();
         if(!$fore.hasClass("current")){
-            $fore.siblings().removeClass("current");
+            h_timer && clearTimeout(h_timer);
             var index = parseInt($fore.data("index"));
-            $(".f05-1d .h-arrow").animate({
-                left:178*index
-            },"fast",function(){
+            var w = $(this).width();
+            var $a = $fore.siblings(".h-arrow");
+            $a.animate({
+                left:w*index
+            },200);
+            h_timer=setTimeout(function(){
+                $fore.siblings().removeClass("current");
                 $fore.addClass("current");
-            });
+            },160);
         }
     })
 ;

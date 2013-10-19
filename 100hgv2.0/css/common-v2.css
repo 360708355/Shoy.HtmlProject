@@ -3,6 +3,13 @@
     margin-right: auto;
     width: 980px;
 }
+.not-support{
+    line-height: 30px;
+    background-color: #F5F5F5;
+    color: #ff6666;
+    text-align: center;
+    border-bottom: solid 1px #CCCCCC;
+}
 .hg-shortcut{
     background-color: #F5F5F5;
     height: 30px;
@@ -11,7 +18,7 @@
     line-height: 30px;
 }
 .fl i,.h-phone,.h-personal,.h-cart,.h-logo,.cert-01,.cert-02,.cert-03,.cert-04,.f01-2d li i,
-.f-2d,.h-cart s,.h-personal i,.hover .cart-s,.h-cart .count,.h-search s,.cart-empty,.h-cate-bottom s,
+.h-trust,.h-cart s,.h-personal i,.hover .cart-s,.h-cart .count,.h-search s,.cart-empty,.h-cate-bottom s,
 .c-icon01,.c-icon02,.c-icon03,.c-icon04,.c-icon05,.c-icon06,.c-icon07,.c-icon08,.h-cate s{
     background: url(../img/common-v2.png) no-repeat;
 }
@@ -58,7 +65,7 @@
     cursor: pointer;
 }
 .f01-1d .notice .dsFollowSlide-next:hover{
-    color: #e94e4e;
+    color: #FF6060;
     text-decoration: underline;
 }
 .f01-1d dd{
@@ -213,7 +220,7 @@
     height: 60px;
 }
 .h-search{
-    border: solid 3px #E94E4E;
+    border: solid 3px #FF6060;
     width: 330px;
     line-height: 30px;
     height: 30px;
@@ -237,7 +244,7 @@
     float: left;
 }
 .h-search .btn{
-    background: none repeat scroll 0 0 #E94E4E;
+    background: none repeat scroll 0 0 #FF6060;
     color: #fff;
     font-size: 14px;
     font-weight: bold;
@@ -380,7 +387,7 @@
 
 .f03{
     height: 40px;
-    background-color: #e94e4e;
+    background-color: #FF6060;
 }
 .f03 .h-cate-tree{
     width: 216px;
@@ -432,7 +439,7 @@
 }
 
 .h-cate-list {
-    border: 1px solid #E94E4E;
+    border: 1px solid #FF6060;
     left: 0;
     padding: 7px 0 0 3px;
     position: absolute;
@@ -516,7 +523,7 @@
     color: #999999;
 }
 .h-cate-recommend a:hover{
-    color: #E94E4E;
+    color: #FF6060;
 }
 .c-last .h-cate-recommend{
     border: none;
@@ -524,7 +531,7 @@
 .h-cate-view{
     display: none;
     background-color: #FFFFFF;
-    border: 1px solid #E94E4E;
+    border: 1px solid #FF6060;
     position: absolute;
     right: -651px;
     top:2px;
@@ -539,7 +546,7 @@
 }
 .hover .h-cate-line{
     background-color: #FFFFFF;
-    border-color: #E94E4E;
+    border-color: #FF6060;
     border-right: none;
     z-index: 20;
 }
@@ -566,12 +573,13 @@
     height: 15px;
 }
 .h-price{
-    color: #E94E4E;
+    color: #FF6060;
     font-family: Arial;
     font-size: 12px;
 }
 .h-price b{
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: bold;
     margin-left: 2px;
 }
 
@@ -581,33 +589,75 @@
 .h-footer{
     clear: both;
 }
-.f-nav{
+.ft-nav{
     background-color: #f9f9f9;
     border-top:1px solid #d5d5d5;
-    height: 115px;
+    border-bottom:1px solid #d5d5d5;
+    height: 150px;
 }
-.f-2d{
-    background-position: 0 -100px;
-    margin:5px auto;
-    width: 608px;
-    height: 53px;
+.ft-nav dl{
+    float: left;
+    margin: 10px 80px 0 0;
+    line-height: 25px;
 }
-.f-3d{
+.ft-nav dt{
+    font-size: 14px;
+    font-weight: bold;
+}
+.ft-nav .h-service{
+    float: left;
+    margin: 10px 0 0 0;
+    line-height: 25px;
+    width: 105px;
+}
+.ft-nav .h-weixin{
+    float: left;
+    height: 130px;
+    border-left: solid 1px #CCCCCC;
+    width: 140px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0 0 0;
+}
+.ft-2d{
+    height: 58px;
+    background-color: #F1F1F1;
+    text-align: center;
+}
+.h-trust{
+    height: 45px;
+    margin: 6px 40px 0;
+    width: 125px;
+    display: inline-block;
+}
+.trust01{
+    background-position: -2px -105px;
+}
+.trust02{
+    background-position: -140px -105px;
+}
+.trust03{
+    background-position: -275px -105px;
+}
+.trust04{
+    background-position: -413px -105px;
+}
+.ft-3d{
     margin:0 auto;
     text-align: center;
 }
-.f-3d ul{
+.ft-3d ul{
     overflow: visible;
     margin: 0 auto;
     width: 300px;
 }
-.f-3d li{
+.ft-3d li{
     float: left;
     padding: 0 8px 0 10px;
     position: relative;
     line-height: 22px;
 }
-.f-3d li s{
+.ft-3d li s{
     border-left: 1px solid #666;
     height: 12px;
     left: 0;
@@ -615,23 +665,23 @@
     top: 6px;
     width: 0;
 }
-.f-3d div{
+.ft-3d div{
     text-align: center;
     line-height: 22px;
     clear: both;
 }
-.f-3d div span{
+.ft-3d div span{
     margin-right: 10px;
 }
-.f-4d ul{
+.ft-4d ul{
     margin: 10px auto;
     width: 570px;
 }
-.f-4d li{
+.ft-4d li{
     float: left;
     position: relative;
 }
-.f-4d li a{
+.ft-4d li a{
     width: 126px;
     height: 45px;
     margin: 0 8px;
@@ -678,4 +728,10 @@
 }
 .wideMode .h-hotWord{
     width: 450px;
+}
+.wideMode .ft-nav dl{
+    margin: 10px 130px 0 0;
+}
+.wideMode .h-trust{
+    margin: 6px 65px 0;
 }

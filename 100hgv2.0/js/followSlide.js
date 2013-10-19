@@ -122,7 +122,7 @@
         if (j.bNumericNavi) {
             n = d(u, j, m);
             i = n.children();
-            l("li", n).bind("click.follow",
+            l("li", n).bind("mouseover.follow",
                 function() {
                     m.hovring = true;
                     var x;
