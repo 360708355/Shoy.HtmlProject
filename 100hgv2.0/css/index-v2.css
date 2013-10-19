@@ -430,75 +430,65 @@
 .floor01-p p{
     height: 1.5em;
     padding: 10px 0;
-    border-top: 1px dashed #e5e5e5;
+    border-top: 1px dashed #CCCCCC;
     overflow: hidden;
-}
-
-   /*main菜单栏hover*/
-.h-cate-view-l{
-    width: 446px;
-    padding:13px 17px;
-    background-color: aquamarine;
-    height: 400px;
-}
-.h-cate-view-r{
-    width: 174px;
-    height: 400px;
-    background-color: goldenrod;
-}
-.h-cate-view-l dl {
-    border-bottom: 1px solid #CCCCCC;
-    overflow: hidden;
-    padding: 6px 0;
-}
-.h-cate-view-l dl dd{
-
-}
-.h-cate-view-l dl dt{
-    padding: 0 12px;
-}
-.h-cate-view-l dl dt a{
-    color: red;
-}
-.h-cate-viewdd em{
-    padding: 0 12px;
-    border-left: 1px solid #CCCCCC;
 }
 
 /*
-.h-cate-view-l dl {
-    border-botom: 1px solid #CCCCCC;
+    main菜单栏hover
+*/
+.h-cate-view-l{
+    width: 450px;
+    height: 396px;
+    padding:13px 17px;
+    border-right: 1px solid #CCCCCC;
     overflow: hidden;
-    padding: 6px 0;
 
 }
-
-.h-cate-view-l dl dt{
+.h-cate-nav{
+    padding: 10px 5px;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid #CCCCCC;
+}
+.h-cate-nav1{
+    width: 100px;
+    clear: both;
     float: left;
     text-align: right;
-    color: #E4393C;
-    font-weight: 700;;
-    padding: 5px 5px;
 }
-.h-cate-view-l dl dt a{
-    color: red;
-}
-.h-cate-view-l dl dt dd{
-    line-height: 30px;
-
-}
-.h-cate-viewdd em{
-
-    font-style: normal;
+.h-cate-nav2{
+    width: 340px;
+    overflow: hidden;
     float: left;
-    padding: 5px 5px;
-    line-height: 30px;
 }
-.h-cate-viewdd em a{
+.h-cate-nav1 a{
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 9px;
+    color: #E94E4E;
+}
+.h-cate-nav2 a{
     border-left: 1px solid #CCCCCC;
+    padding: 0 9px;
 }
-*/
-
+.h-cate-view-r{
+    width: 135px;
+    height: 396px;
+    padding:15px;
+    overflow: hidden;
+}
+.h-cate-view-r h2{
+    padding: 9px 0px;
+    color: #E94E4E;
+    font-size: 14px;
+    font-weight: bold;
+}
+.h-cate-view-r a{
+    border-right: 1px solid #CCCCCC;
+    padding: 0 9px;
+    margin-top: 10px;
+}
 /*
     宽屏处理
 */
