@@ -15,6 +15,11 @@ $(document)
             nextHTML:'<a href="#" class="s-next"></a>'
         });
         $(".n-news li:odd").css("background-color","#F4F4F4");
+        $(".h-sliderC").followSlide({
+            nHoldTime:6000,
+            bVertical:false,
+            bNumericNavi:true
+        });
     })
     .delegate(".n-header","mouseover",function(){
         var $this = $(this);
