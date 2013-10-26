@@ -60,6 +60,7 @@
             return "number is less"
         }
         m.trueLength = f.length;
+        m.cld=f;
         t = f.first().width();
         k = f.first().height();
         r.css({
@@ -122,7 +123,7 @@
         if (j.bNumericNavi) {
             n = d(u, j, m);
             i = n.children();
-            l("li", n).bind("mouseover.follow",
+            l("li", n).bind("click.follow mouseover.follow",
                 function() {
                     m.hovring = true;
                     var x;
@@ -199,7 +200,7 @@
                                             left: 0
                                         });
                                         if (j.bNumericNavi) {
-                                            i.filter("." + g).removeClass();
+                                            i.filter("." + g).removeClass(g);
                                             i.eq(0).addClass(g)
                                         }
                                     } else {
@@ -209,12 +210,12 @@
                                                 left: -t * (m.trueLength - 1)
                                             });
                                             if (j.bNumericNavi) {
-                                                i.filter("." + g).removeClass();
+                                                i.filter("." + g).removeClass(g);
                                                 i.eq(m.trueLength - 1).addClass(g)
                                             }
                                         } else {
                                             if (j.bNumericNavi) {
-                                                i.filter("." + g).removeClass();
+                                                i.filter("." + g).removeClass(g);
                                                 i.eq(y).addClass(g)
                                             }
                                         }
@@ -271,7 +272,7 @@
                                             left: -t * (m.trueLength - 1)
                                         });
                                         if (j.bNumericNavi) {
-                                            i.filter("." + g).removeClass();
+                                            i.filter("." + g).removeClass(g);
                                             i.eq(0).addClass(g)
                                         }
                                     } else {
@@ -281,12 +282,12 @@
                                                 left: 0
                                             });
                                             if (j.bNumericNavi) {
-                                                i.filter("." + g).removeClass();
+                                                i.filter("." + g).removeClass(g);
                                                 i.eq(m.trueLength - 1).addClass(g)
                                             }
                                         } else {
                                             if (j.bNumericNavi) {
-                                                i.filter("." + g).removeClass();
+                                                i.filter("." + g).removeClass(g);
                                                 i.eq(y).addClass(g)
                                             }
                                         }
@@ -343,7 +344,7 @@
                                             top: 0
                                         });
                                         if (j.bNumericNavi) {
-                                            i.filter("." + g).removeClass();
+                                            i.filter("." + g).removeClass(g);
                                             i.eq(0).addClass(g)
                                         }
                                     } else {
@@ -353,12 +354,12 @@
                                                 top: -k * (m.trueLength - 1)
                                             });
                                             if (j.bNumericNavi) {
-                                                i.filter("." + g).removeClass();
+                                                i.filter("." + g).removeClass(g);
                                                 i.eq(m.trueLength - 1).addClass(g)
                                             }
                                         } else {
                                             if (j.bNumericNavi) {
-                                                i.filter("." + g).removeClass();
+                                                i.filter("." + g).removeClass(g);
                                                 i.eq(y).addClass(g)
                                             }
                                         }
@@ -415,7 +416,7 @@
                                             top: -k * (m.trueLength - 1)
                                         });
                                         if (j.bNumericNavi) {
-                                            i.filter("." + g).removeClass();
+                                            i.filter("." + g).removeClass(g);
                                             i.eq(0).addClass(g)
                                         }
                                     } else {
@@ -425,12 +426,12 @@
                                                 top: 0
                                             });
                                             if (j.bNumericNavi) {
-                                                i.filter("." + g).removeClass();
+                                                i.filter("." + g).removeClass(g);
                                                 i.eq(m.trueLength - 1).addClass(g)
                                             }
                                         } else {
                                             if (j.bNumericNavi) {
-                                                i.filter("." + g).removeClass();
+                                                i.filter("." + g).removeClass(g);
                                                 i.eq(y).addClass(g)
                                             }
                                         }
@@ -512,7 +513,9 @@
             h = 0,
             f = j.trueLength;
         do {
-            l += '<li><a href="#">' + (h + 1) + "</a></li>"
+            var title = $(j.cld).eq(h).data("title");
+            if(!title) title=h+1;
+            l += '<li class="nvai-'+h+'"><a href="#">' + title + "</a></li>"
         }
         while (++h < f);
         l += "</ul>";

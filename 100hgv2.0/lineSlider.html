@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Line Slider</title>
+    <style type="text/css">
+        h2,b,s{
+            margin: 0;
+            padding: 0;
+            font-style:normal;
+            color: #666;
+        }
+        .box{
+            width: 980px;
+            margin: 0 auto;
+        }
+        .content{
+            height: 350px;
+            text-align: center;
+            color: #ff5005;
+        }
+        .c1{
+            background-color: #ff8565;
+        }
+        .c2{
+            background-color: #dd4262;
+        }
+        .c3{
+            background-color: #999999;
+        }
+        .c4{
+            background-color: #eeeeee;
+        }
+        .line-slide{
+            position: relative;
+            overflow: hidden;
+        }
+        .line-slide .b{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-bottom: solid 2px #CCCCCC;
+            z-index: -10;
+        }
+        .line-item{
+            float: left;
+            width: 200px;
+            line-height: 30px;
+        }
+        .line-arrow{
+            width: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 28px;
+            border-bottom: solid 2px #FF6060;
+            z-index: -1;
+        }
+        .line-arrow b{
+            width: 40%;
+            background-color: #ff6060;
+            line-height: 20px;
+            height: 20px;
+            display: block;
+            margin: 5px auto 0;
+        }
+        .line-arrow s {
+            border-color: #FF6060 transparent transparent;
+            border-style: solid dashed dashed;
+            border-width: 4px;
+            display: block;
+            height: 0;
+            margin: 0 auto;
+            width: 0;
+        }
+        .line-item h2{
+            font-size: 14px;
+            width: 40%;
+            text-align: center;
+            margin:0 auto;
+        }
+        .line-slide .current h2{
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="content c1">1</div>
+        <div class="content c2">2</div>
+        <div class="content c3">3</div>
+        <div class="content c4">4</div>
+    </div>
+    <script type="text/javascript" src="http://fed.www.100hg.com/js/jQuery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+        (function(S){
+            S.prototype.lineSlide=function(opt){
+                opt= S.extend({
+                    head:[],
+                    itemWidth:200,
+                    top:30
+                },opt);
+                var $this=$(this)
+                $this.parent().css("position","relative");
+                $this.not($this.eq(0)).hide();
+                var $arrow=S('<div class="line-arrow"><b></b><s></s></div>');
+                var lines=S('<div class="line-slide"><div class="b"></div></div>');
+                lines.append($arrow);
+                for(var i=0;i<$this.length;i++){
+                    var header = (opt.head[i] ? opt.head[i]:"");
+                    lines.append('<div class="line-item'+(i==0?" current":"")+'"><h2>'+header+'</h2><b></b><s></s></div>');
+                }
+                $this.eq(0).before(lines);
+                lines.find(".line-item").hover(function(){
+                    var $t=$(this);
+                    var i = lines.find(".line-item").index($t);
+                    $t.siblings(".line-item").removeClass("current");
+                    $arrow.animate({
+                        left:(opt.itemWidth*i) + "px"
+                    },200,function(){
+                        $t.addClass("current");
+                        var $c=$this.eq(i);
+                        $this.not($c).hide();
+                        $c.show();
+                    })
+                },function(){
+
+                })
+            };
+        })(jQuery);
+
+    </script>
+</body>
+</html>

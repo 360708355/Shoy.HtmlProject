@@ -1,8 +1,20 @@
-var h_timer;
+(function(S){
+    S("img[hsrc]").shoyLazy({
+        lazySrc:"hsrc",
+        prePix:60,
+        auto:true
+    });
+    S(".f05-1d .h-content").lineSlide();
+    var $floorRight=$(".floor-right");
+    for(var i=0;i<$floorRight.length;i++){
+        $floorRight.eq(i).find(".h-content").lineSlide();
+    }
+    huge.imgError("img");
+})(jQuery);
 $(document)
     .ready(function(){
         $(".h-sliderA").followSlide({
-            nHoldTime:6000,
+            nHoldTime:5000,
             bVertical:true,
             bNumericNavi:true
         });
@@ -20,6 +32,21 @@ $(document)
             bVertical:false,
             bNumericNavi:true
         });
+        $(".h-content3-l .h-sliderD").followSlide({
+            nHoldTime:6000,
+            bVertical:false,
+            bNumericNavi:true,
+            bAuto:false
+        });
+        var $floorSlide = $(".h-floorSlide");
+        for(var i=0;i<$floorSlide.length;i++){
+            $floorSlide.eq(i).followSlide({
+                nHoldTime:6000,
+                bVertical:false,
+                bNumericNavi:true,
+                bAuto:false
+            });
+        }
     })
     .delegate(".n-header","mouseover",function(){
         var $this = $(this);
@@ -32,20 +59,14 @@ $(document)
             $this.next().removeClass("none");
         }
     })
-    .delegate(".ht .h-title","mouseover",function(){
-        var $fore = $(this).parent();
-        if(!$fore.hasClass("current")){
-            h_timer && clearTimeout(h_timer);
-            var index = parseInt($fore.data("index"));
-            var w = $(this).width();
-            var $a = $fore.siblings(".h-arrow");
-            $a.animate({
-                left:w*index
-            },200);
-            h_timer=setTimeout(function(){
-                $fore.siblings().removeClass("current");
-                $fore.addClass("current");
-            },160);
+    .delegate(".b-hover","hover",function(){
+        $(this).toggleClass("hover");
+    })
+    .delegate(".h-hotSale li","hover",function(){
+        var $t = $(this);
+        if(!$t.hasClass("current")){
+            $t.siblings("li").removeClass("current");
+            $t.addClass("current");
         }
     })
 ;

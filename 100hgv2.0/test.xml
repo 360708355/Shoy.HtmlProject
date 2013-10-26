@@ -1,0 +1,22 @@
+<notify>
+    <payment_type>1</payment_type>
+    <subject>百货购手机在线支付测试</subject>
+    <trade_no>2013102338265550</trade_no>
+    <buyer_email>1637151857@qq.com</buyer_email>
+    <gmt_create>2013-10-23 16:31:01</gmt_create>
+    <notify_type>trade_status_sync</notify_type>
+    <quantity>1</quantity>
+    <out_trade_no>20131023000007</out_trade_no>
+    <notify_time>2013-10-23 17:55:23</notify_time>
+    <seller_id>2088901725096489</seller_id>
+    <trade_status>TRADE_FINISHED</trade_status>
+    <is_total_fee_adjust>N</is_total_fee_adjust>
+    <total_fee>0.10</total_fee>
+    <gmt_payment>2013-10-23 16:31:17</gmt_payment>
+    <seller_email>1718668746@qq.com</seller_email>
+    <gmt_close>2013-10-23 16:31:17</gmt_close>
+    <price>0.10</price>
+    <buyer_id>2088602258114508</buyer_id>
+    <notify_id>53228618147a54843bd0e21a7dd414534s</notify_id>
+    <use_coupon>N</use_coupon>
+</notify>

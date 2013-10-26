@@ -18,13 +18,16 @@
     <![endIf]-->
     <script type="text/javascript">
         window.huge = {
-            compatible: true
+            compatible: true,
+            showCate: true,
+            goTop:true,
+            _blank:true
         };
     </script>
+    <base target="_blank" />
 </head>
 <body>
 <script type="text/javascript" src="js/base-v1.js" charset="utf-8"></script>
-
 <!--全站导航-->
 <div class="hg-shortcut">
     <div class="wd">
@@ -137,7 +140,7 @@
     <div class="f02-2d">
         <div class="h-search">
             <s></s>
-            <input value="手机"/>
+            <input value="" placeholder="手机"/>
             <button class="btn" type="button">搜索</button>
         </div>
         <div class="h-hotWord">
@@ -169,13 +172,13 @@
                 </div>
             </div>
         </div>
+        <!-- 购物车 -->
         <div class="h-cart h-dd">
             <a href="">我的购物车</a>
             <s class="cart-s"></s>
             <span class="blank"></span>
             <span class="count">0</span>
-
-            <div class="cart-empty">
+            <div class="cart-list empty">
                 购物车中还没有商品，赶紧选购吧！
             </div>
         </div>
@@ -184,657 +187,1885 @@
 <!-- Logo区域 End -->
 <!-- 公有导航 -->
 <div class="wd f03">
-    <div class="h-cate-tree">
-        <span>所有商品分类</span>
-        <i></i>
+<div class="h-cate-tree">
+    <span>所有商品分类</span>
+    <i></i>
 
-        <div class="h-cate-list">
-            <div class="h-cate-item">
-                <div class="h-cate">
-                    <div class="h-cate-line">
-                        <div class="icon c-icon01"></div>
-                        <a href="" class="h-cate-tie">服饰鞋包</a>
-                        <s></s>
-                    </div>
-                    <div class="h-cate-view">
-                        <div class="h-cate-view-l fl">
-                            <div class="h-cate-nav">
-                                <div class="h-cate-nav1">
-                                    <a href="">女装</a>
-                                </div>
-                                <div class="h-cate-nav2">
-                                    <a href="">连衣裙</a>
-                                    <a href="">连衣裙</a>
-                                </div>
+    <div class="h-cate-list none">
+        <div class="h-cate-item">
+            <div class="h-cate">
+                <div class="h-cate-line">
+                    <div class="icon c-icon01"></div>
+                    <a href="" class="h-cate-tie">服饰鞋包</a>
+                    <s></s>
+                </div>
+                <div class="h-cate-view">
+                    <div class="c-view-left fl">
+                        <div class="c-nav">
+                            <div class="c-nav-second">
+                                <a href="">女装</a>
                             </div>
-                            <div class="h-cate-nav">
-                                <div class="h-cate-nav1">
-                                    <a href="">女装</a>
-                                </div>
-                                <div class="h-cate-nav2">
-                                    <a href="">连衣裙</a>
-                                    <a href="">连衣裙</a>
-                                    <a href="">连衣裙</a>
-                                    <a href="">连衣裙</a>
-                                    <a href="">连衣裙</a>
-                                    <a href="">连衣裙</a>
-                                    <a href="">连衣裙</a>
-                                    <a href="">连衣裙</a>
-                                </div>
-                            </div>
-                            <div class="h-cate-nav">
-                                <div class="h-cate-nav1">
-                                    <a href="">女装</a>
-                                </div>
-                                <div class="h-cate-nav2">
-                                    <a href="">连衣裙</a>
-                                    <a href="">连衣裙</a>
-                                </div>
+                            <div class="c-nav-third">
+                                <em><a href="">连衣裙</a></em>
+                                <em><a href="">连衣裙</a></em>
                             </div>
                         </div>
-                        <div class="h-cate-view-r tac fr">
-                            <h2>品牌推销</h2>
-                            <div class="">
-                                <a href="">连衣裙</a>
-                                <a href="">连衣裙</a>
-                                <a href="">连衣裙</a>
-                                <a href="">连衣裙</a>
-                                <a href="">连衣裙</a>
-                                <a href="">连衣裙</a>
-                                <a href="">连衣裙</a>
-                                <a href="">连衣裙</a>
+                        <div class="c-nav">
+                            <div class="c-nav-second">
+                                <a href="">女装</a>
                             </div>
-                            <h2>促销活动</h2>
+                            <div class="c-nav-third">
+                                <em><a href="">连衣裙</a></em>
+                                <em><a href="">连衣裙</a></em>
+                                <em><a href="">连衣裙</a></em>
+                                <em><a href="">连衣裙</a></em>
+                                <em><a href="">连衣裙</a></em>
+                                <em><a href="">连衣裙</a></em>
+                                <em><a href="">连衣裙</a></em>
+                                <em><a href="">连衣裙</a></em>
+                                <em><a href="">连衣裙</a></em>
+                            </div>
+                        </div>
+                        <div class="c-nav">
+                            <div class="c-nav-second">
+                                <a href="">时尚男女装</a>
+                            </div>
+                            <div class="c-nav-third">
+                                <em><a href="">连衣裙</a></em>
+                                <em><a href="">连衣裙</a></em>
+                                <em><a href="">连衣裙</a></em>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-view-right tac fr">
+                        <div class="c-view-close">×</div>
+                        <h2>品牌推销</h2>
+
+                        <div class="c-view-brand">
+                            <a href="">连衣裙</a>
+                            <a href="">连衣裙</a>
+                            <a href="">连衣裙</a>
+                            <a href="">连衣裙</a>
+                            <a href="">连衣裙</a>
+                            <a href="">连衣裙</a>
+                            <a href="">连衣裙</a>
+                            <a href="">连衣裙</a>
+                        </div>
+                        <h2>促销活动</h2>
+
+                        <div class="c-view-promotion">
+                            <a href="">双十一来了！小伙伴们快乐Happy一吓！</a>
+                            <a href="">双十一来了！</a>
+                            <a href="">双十一来了！</a>
+                            <a href="">双十一来了！</a>
                         </div>
                     </div>
                 </div>
-                <div class="h-cate-recommend">
-                    <a href="">睡衣</a>
-                    <a href="">连衣裙</a>
-                    <a href="">女鞋</a>
-                    <a href="">女包</a>
-                </div>
             </div>
-            <div class="h-cate-item">
-                <div class="h-cate">
-                    <div class="h-cate-line">
-                        <div class="icon c-icon02"></div>
-                        <a href="" class="h-cate-tie">食品酒水</a>
-                        <s></s>
-                    </div>
-                    <div class="h-cate-view">
-                    </div>
-                </div>
-                <div class="h-cate-recommend">
-                    <a href="">睡衣</a>
-                    <a href="">连衣裙</a>
-                    <a href="">女鞋</a>
-                    <a href="">女包</a>
-                </div>
-            </div>
-            <div class="h-cate-item">
-                <div class="h-cate">
-                    <div class="h-cate-line">
-                        <div class="icon c-icon03"></div>
-                        <a href="" class="h-cate-tie">运动休闲</a>
-                        <s></s>
-                    </div>
-                    <div class="h-cate-view">
-                    </div>
-                </div>
-                <div class="h-cate-recommend">
-                    <a href="">睡衣</a>
-                    <a href="">连衣裙</a>
-                    <a href="">女鞋</a>
-                    <a href="">女包</a>
-                </div>
-            </div>
-            <div class="h-cate-item">
-                <div class="h-cate">
-                    <div class="h-cate-line">
-                        <div class="icon c-icon04"></div>
-                        <a href="" class="h-cate-tie">母婴保健</a>
-                        <s></s>
-                    </div>
-                    <div class="h-cate-view">
-                    </div>
-                </div>
-                <div class="h-cate-recommend">
-                    <a href="">睡衣</a>
-                    <a href="">连衣裙</a>
-                    <a href="">女鞋</a>
-                    <a href="">女包</a>
-                </div>
-            </div>
-            <div class="h-cate-item">
-                <div class="h-cate">
-                    <div class="h-cate-line">
-                        <div class="icon c-icon05"></div>
-                        <a href="" class="h-cate-tie">家居用品</a>
-                        <s></s>
-                    </div>
-                    <div class="h-cate-view">
-                    </div>
-                </div>
-                <div class="h-cate-recommend">
-                    <a href="">睡衣</a>
-                    <a href="">连衣裙</a>
-                    <a href="">女鞋</a>
-                    <a href="">女包</a>
-                </div>
-            </div>
-            <div class="h-cate-item">
-                <div class="h-cate">
-                    <div class="h-cate-line">
-                        <div class="icon c-icon06"></div>
-                        <a href="" class="h-cate-tie">美容护肤</a>
-                        <s></s>
-                    </div>
-                    <div class="h-cate-view">
-                    </div>
-                </div>
-                <div class="h-cate-recommend">
-                    <a href="">睡衣</a>
-                    <a href="">连衣裙</a>
-                    <a href="">女鞋</a>
-                    <a href="">女包</a>
-                </div>
-            </div>
-            <div class="h-cate-item c-last">
-                <div class="h-cate">
-                    <div class="h-cate-line">
-                        <div class="icon c-icon07"></div>
-                        <a href="" class="h-cate-tie">家电数码</a>
-                        <s></s>
-                    </div>
-                    <div class="h-cate-view">
-                    </div>
-                </div>
-                <div class="h-cate-recommend">
-                    <a href="">睡衣</a>
-                    <a href="">连衣裙</a>
-                    <a href="">女鞋</a>
-                    <a href="">女包</a>
-                </div>
-            </div>
-            <div class="h-cate-bottom">
-                <s></s>
-                <a href="" class="h-cate-tie">天眉葛根茶</a>
+            <div class="h-cate-recommend">
+                <a href="">睡衣</a>
+                <a href="">连衣裙</a>
+                <a href="">女鞋</a>
+                <a href="">女包</a>
             </div>
         </div>
+        <div class="h-cate-item">
+            <div class="h-cate">
+                <div class="h-cate-line">
+                    <div class="icon c-icon02"></div>
+                    <a href="" class="h-cate-tie">食品酒水</a>
+                    <s></s>
+                </div>
+                <div class="h-cate-view">
+                </div>
+            </div>
+            <div class="h-cate-recommend">
+                <a href="">睡衣</a>
+                <a href="">连衣裙</a>
+                <a href="">女鞋</a>
+                <a href="">女包</a>
+            </div>
+        </div>
+        <div class="h-cate-item">
+            <div class="h-cate">
+                <div class="h-cate-line">
+                    <div class="icon c-icon03"></div>
+                    <a href="" class="h-cate-tie">运动休闲</a>
+                    <s></s>
+                </div>
+                <div class="h-cate-view">
+                </div>
+            </div>
+            <div class="h-cate-recommend">
+                <a href="">睡衣</a>
+                <a href="">连衣裙</a>
+                <a href="">女鞋</a>
+                <a href="">女包</a>
+            </div>
+        </div>
+        <div class="h-cate-item">
+            <div class="h-cate">
+                <div class="h-cate-line">
+                    <div class="icon c-icon04"></div>
+                    <a href="" class="h-cate-tie">母婴保健</a>
+                    <s></s>
+                </div>
+                <div class="h-cate-view">
+                </div>
+            </div>
+            <div class="h-cate-recommend">
+                <a href="">睡衣</a>
+                <a href="">连衣裙</a>
+                <a href="">女鞋</a>
+                <a href="">女包</a>
+            </div>
+        </div>
+        <div class="h-cate-item">
+            <div class="h-cate">
+                <div class="h-cate-line">
+                    <div class="icon c-icon05"></div>
+                    <a href="" class="h-cate-tie">家居用品</a>
+                    <s></s>
+                </div>
+                <div class="h-cate-view">
+                </div>
+            </div>
+            <div class="h-cate-recommend">
+                <a href="">睡衣</a>
+                <a href="">连衣裙</a>
+                <a href="">女鞋</a>
+                <a href="">女包</a>
+            </div>
+        </div>
+        <div class="h-cate-item">
+            <div class="h-cate">
+                <div class="h-cate-line">
+                    <div class="icon c-icon06"></div>
+                    <a href="" class="h-cate-tie">美容护肤</a>
+                    <s></s>
+                </div>
+                <div class="h-cate-view">
+                </div>
+            </div>
+            <div class="h-cate-recommend">
+                <a href="">睡衣</a>
+                <a href="">连衣裙</a>
+                <a href="">女鞋</a>
+                <a href="">女包</a>
+            </div>
+        </div>
+        <div class="h-cate-item c-last">
+            <div class="h-cate">
+                <div class="h-cate-line">
+                    <div class="icon c-icon07"></div>
+                    <a href="" class="h-cate-tie">家电数码</a>
+                    <s></s>
+                </div>
+                <div class="h-cate-view">
+                </div>
+            </div>
+            <div class="h-cate-recommend">
+                <a href="">睡衣</a>
+                <a href="">连衣裙</a>
+                <a href="">女鞋</a>
+                <a href="">女包</a>
+            </div>
+        </div>
+        <div class="h-cate-bottom">
+            <s></s>
+            <a href="" class="h-cate-tie">天眉葛根茶</a>
+        </div>
     </div>
-    <ul class="h-menu">
-        <li class="menu-current">
-            <a href="">首　页</a>
-        </li>
-        <li>
-            <a href="">购实惠</a>
-        </li>
-        <li class="m-hot">
-            <a href="">天天特价</a>
-        </li>
-        <li class="m-new">
-            <a href="">无名良品</a>
-        </li>
-    </ul>
+</div>
+<ul class="h-menu">
+    <li class="menu-current">
+        <a href="">首　页</a>
+    </li>
+    <li>
+        <a href="">购实惠</a>
+    </li>
+    <li class="m-hot">
+        <a href="">天天特价</a>
+    </li>
+    <li class="m-new">
+        <a href="">无名良品</a>
+    </li>
+</ul>
 </div>
 <!-- 公有导航 End -->
 <!-- 第一视觉区 -->
 <div class="wd f04 clearfix">
-    <div class="f04-main clearfix">
-        <div class="f04-1d">
-            <div class="h-sliderA dsFollowSlide">
-                <div class="dsFollowSlide-view">
-                    <ul class="dsFollowSlide-con">
-                        <li>
-                            <a href="">
-                                <img height="300" src="img/slider01.gif" alt=""/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img height="300" src="img/slider01.gif" alt=""/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img height="300" src="img/slider01.gif" alt=""/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img height="300" src="img/slider01.gif" alt=""/>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="h-sliderB dsFollowSlide">
-                <div class="dsFollowSlide-view">
-                    <ul class="dsFollowSlide-con">
-                        <li class="s-unit">
-                            <ul>
-                                <li class="s-frt">
-                                    <a href="">
-                                        <img height="130" src="img/slider02.gif" alt=""/>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img height="130" src="img/slider02.gif" alt=""/>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img height="130" src="img/slider02.gif" alt=""/>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img height="130" src="img/slider02.gif" alt=""/>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="s-unit">
-                            <ul>
-                                <li class="s-frt">
-                                    <a href="">
-                                        <img height="130" src="img/slider02.gif" alt=""/>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img height="130" src="img/slider02.gif" alt=""/>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img height="130" src="img/slider02.gif" alt=""/>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img height="130" src="img/slider02.gif" alt=""/>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="s-unit">
-                            <ul>
-                                <li class="s-frt">
-                                    <a href="">
-                                        <img height="130" src="img/slider02.gif" alt=""/>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img height="130" src="img/slider02.gif" alt=""/>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img height="130" src="img/slider02.gif" alt=""/>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img height="130" src="img/slider02.gif" alt=""/>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="f04-2d">
-            <div class="h-notice">
-                <h2 class="n-header n-header-first current">商家推荐</h2>
-                <ul class="n-content">
-                    <li>
-                        <a href="" class="n-img"><img src="img/hd-02.gif" alt=""/></a>
-                        <a href="" class="n-name">BH 【实惠价】有友泡凤爪泡椒风味 80g*3袋（成都发货）</a>
-                        <span class="n-price">
-                            <strong class="h-price">¥<b>56.0</b></strong>
-                        </span>
-                    </li>
-                    <li>
-                        <a href="" class="n-img"><img src="img/hd-02.gif" alt=""/></a>
-                        <a href="" class="n-name">BH 【实惠价】有友泡凤爪泡椒风味 80g*3袋（成都发货）</a>
-                        <span class="n-price">
-                            <strong class="h-price">¥<b>56.0</b></strong>
-                        </span>
-                    </li>
-                    <li>
-                        <a href="" class="n-img"><img src="img/hd-02.gif" alt=""/></a>
-                        <a href="" class="n-name">BH 【实惠价】有友泡凤爪泡椒风味的大幅度是对的大幅度 80g*3袋（成都发货）</a>
-                        <span class="n-price">
-                            <strong class="h-price">¥<b>56.0</b></strong>
-                        </span>
-                    </li>
-                    <li>
-                        <a href="" class="n-img"><img src="img/hd-02.gif" alt=""/></a>
-                        <a href="" class="n-name">BH 【实惠价】有友泡凤爪泡椒风味 80g*3袋（成都发货）</a>
-                        <span class="n-price">
-                            <strong class="h-price">¥<b>56.0</b></strong>
-                        </span>
-                    </li>
-                </ul>
-                <h2 class="n-header">联系我们</h2>
-
-                <div class="n-content none"></div>
-                <h2 class="n-header">商城公告</h2>
-
-                <div class="n-content none">
-                    <ul class="n-news">
-                        <li>
-                            <i></i>
-                            <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
-                        </li>
-                        <li>
-                            <i></i>
-                            <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
-                        </li>
-                        <li>
-                            <i></i>
-                            <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
-                        </li>
-                        <li>
-                            <i></i>
-                            <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
-                        </li>
-                        <li>
-                            <i></i>
-                            <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
-                        </li>
-                        <li>
-                            <i></i>
-                            <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
-                        </li>
-                        <li>
-                            <i></i>
-                            <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
-                        </li>
-                        <li>
-                            <i></i>
-                            <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
-                        </li>
-                        <li>
-                            <i></i>
-                            <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
-                        </li>
-                        <li>
-                            <i></i>
-                            <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="h-recommend">
-                <a href="">
-                    <img width="230" height="110" src="img/hd-01.gif" alt=""/>
-                </a>
-            </div>
+<div class="f04-main clearfix">
+<div class="f04-1d">
+    <div class="h-sliderA dsFollowSlide">
+        <div class="dsFollowSlide-view">
+            <ul class="dsFollowSlide-con">
+                <li>
+                    <a href="">
+                        <img height="300" src="img/slider01.gif" alt=""/>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img height="300" src="img/slider01.gif" alt=""/>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img height="300" src="img/slider01.gif" alt=""/>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img height="300" src="img/slider01.gif" alt=""/>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
+    <div class="h-sliderB dsFollowSlide">
+        <div class="dsFollowSlide-view">
+            <ul class="dsFollowSlide-con">
+                <li class="s-unit">
+                    <ul>
+                        <li class="s-frt">
+                            <a href="">
+                                <img height="130" src="img/slider02.gif" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img height="130" src="img/slider02.gif" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img height="130" src="img/slider02.gif" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img height="130" src="img/slider02.gif" alt=""/>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="s-unit">
+                    <ul>
+                        <li class="s-frt">
+                            <a href="">
+                                <img height="130" src="img/slider02.gif" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img height="130" src="img/slider02.gif" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img height="130" src="img/slider02.gif" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img height="130" src="img/slider02.gif" alt=""/>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="s-unit">
+                    <ul>
+                        <li class="s-frt">
+                            <a href="">
+                                <img height="130" src="img/slider02.gif" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img height="130" src="img/slider02.gif" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img height="130" src="img/slider02.gif" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img height="130" src="img/slider02.gif" alt=""/>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="f04-2d">
+    <div class="h-notice">
+        <h2 class="n-header n-header-first current">商家推荐</h2>
+        <ul class="n-content">
+            <li>
+                <a href="" class="n-img"><img hsrc="img/hd-02.gif" alt=""/></a>
+                <a href="" class="n-name">BH 【实惠价】有友泡凤爪泡椒风味 80g*3袋（成都发货）</a>
+                        <span class="n-price">
+                            <strong class="h-price">¥<b>56.0</b></strong>
+                        </span>
+            </li>
+            <li>
+                <a href="" class="n-img"><img hsrc="img/hd-02.gif" alt=""/></a>
+                <a href="" class="n-name">BH 【实惠价】有友泡凤爪泡椒风味 80g*3袋（成都发货）</a>
+                        <span class="n-price">
+                            <strong class="h-price">¥<b>56.0</b></strong>
+                        </span>
+            </li>
+            <li>
+                <a href="" class="n-img"><img hsrc="img/hd-02.gif" alt=""/></a>
+                <a href="" class="n-name">BH 【实惠价】有友泡凤爪泡椒风味的大幅度是对的大幅度 80g*3袋（成都发货）</a>
+                        <span class="n-price">
+                            <strong class="h-price">¥<b>56.0</b></strong>
+                        </span>
+            </li>
+            <li>
+                <a href="" class="n-img"><img hsrc="img/hd-02.gif" alt=""/></a>
+                <a href="" class="n-name">BH 【实惠价】有友泡凤爪泡椒风味 80g*3袋（成都发货）</a>
+                        <span class="n-price">
+                            <strong class="h-price">¥<b>56.0</b></strong>
+                        </span>
+            </li>
+        </ul>
+        <h2 class="n-header">联系我们</h2>
+
+        <div class="n-content h-contact none">
+            <div class="h-picture">
+                <img hsrc="img/h-picture.jpg" alt=""/>
+            </div>
+            <div class="h-online">
+                <p class="online">
+                    <b>订单：</b>
+                    <a href="#">
+                        <img onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=4006739992&eid=218808P8z8p8P8K808y80&o=www.100hg.com&q=7&ref='+document.location, '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');"
+                             border="0" src="http://im.bizapp.qq.com:8000/zx_qq.gif">
+                    </a>
+                </p>
+
+                <p class="n online">
+                    <b>售后：</b>
+                    <a href="#">
+                        <img onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=4006739992&eid=218808P8z8p8P8K808y80&o=www.100hg.com&q=7&ref='+document.location, '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');"
+                             border="0" src="http://im.bizapp.qq.com:8000/zx_qq.gif">
+                    </a>
+                </p>
+
+                <p class="t">
+                    <b>订购电话：</b><br/>
+                    <span>15511111111</span>
+                </p>
+
+                <p class="n">
+                    <b>售后服务：</b><br/>
+                    <span>400-673-9992</span>
+                </p>
+
+                <p class="t">
+                    <b>店主寄语：</b><br/>
+                            <span>
+                                有好看到了有好看到了有好看到了有好看到了有好看到了有好看到了
+                            </span>
+                </p>
+            </div>
+        </div>
+        <h2 class="n-header">商城公告</h2>
+
+        <div class="n-content none">
+            <ul class="n-news">
+                <li>
+                    <i></i>
+                    <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
+                </li>
+                <li>
+                    <i></i>
+                    <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
+                </li>
+                <li>
+                    <i></i>
+                    <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
+                </li>
+                <li>
+                    <i></i>
+                    <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
+                </li>
+                <li>
+                    <i></i>
+                    <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
+                </li>
+                <li>
+                    <i></i>
+                    <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
+                </li>
+                <li>
+                    <i></i>
+                    <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
+                </li>
+                <li>
+                    <i></i>
+                    <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
+                </li>
+                <li>
+                    <i></i>
+                    <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
+                </li>
+                <li>
+                    <i></i>
+                    <a href="">桃 “礼” 芳天下 9月谢师恩！</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="h-recommend">
+        <a href="">
+            <img width="230" height="110" src="img/hd-01.gif" alt=""/>
+        </a>
+    </div>
+</div>
+</div>
 </div>
 <!-- 第一视觉区 End -->
 <!-- 促销区 -->
 <div class="wd f05">
-<div class="f05-1d ht">
-<div class="h-arrow">
-    <h2></h2>
-    <b></b>
-</div>
-<div class="h-fore01 current" data-index="0">
-    <div class="h-title">
-        <h2>特价促销</h2>
-    </div>
-    <div class="h-content">
-        <!-- 特价促销 -->
-        <div class="h-content-1d fl">
-            <div class="h-sliderC dsFollowSlide">
-                <div class="dsFollowSlide-View">
-                    <ul class="dsFollowSlide-con">
-                        <li><a href=""><img width="214" height="339" src="img/h-img_03.jpg" alt=""/></a></li>
-                        <li><a href=""><img width="214" height="339" src="img/h-img_03.jpg" alt=""/></a></li>
-                        <li><a href=""><img width="214" height="339" src="img/h-img_03.jpg" alt=""/></a></li>
+    <div class="f05-1d">
+        <div class="h-content h-fore01" data-header="特价促销">
+            <!-- 特价促销 -->
+            <div class="h-content-1d fl">
+                <div class="h-sliderC dsFollowSlide">
+                    <div class="dsFollowSlide-View">
+                        <ul class="dsFollowSlide-con">
+                            <li><a href=""><img width="215" height="340" lsrc="img/h-img_03.jpg" alt=""/></a></li>
+                            <li><a href=""><img width="215" height="340" lsrc="img/h-img_03.jpg" alt=""/></a></li>
+                            <li><a href=""><img width="215" height="340" lsrc="img/h-img_03.jpg" alt=""/></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="h-content-2d fr">
+                <div class="h-content-2dt">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <div class="h-2dtimg"><img width="120" height="120" lsrc="img/h-img_06.jpg" alt=""/>
+                                </div>
+                                <p class="h-content-2dp ovh ">包邮 天眉葛根茶美丽女人装 两盒子起售</p>
+                            </a>
+
+                            <p class="h-price-line"><s>¥ 298.00</s><strong class="h-price">¥<b>199.0</b></strong></p>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="h-2dtimg"><img width="120" height="120" lsrc="img/h-img_06.jpg" alt=""/>
+                                </div>
+                                <p class="h-content-2dp ovh ">包邮 天眉葛根茶美丽女人装 两盒子起售</p>
+                            </a>
+
+                            <p class="h-price-line"><s>¥ 298.00</s><strong class="h-price">¥<b>199.0</b></strong></p>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="h-2dtimg"><img width="120" height="120" lsrc="img/h-img_06.jpg" alt=""/>
+                                </div>
+                                <p class="h-content-2dp ovh ">包邮 天眉葛根茶美丽女人装 两盒子起售</p>
+                            </a>
+
+                            <p class="h-price-line"><s>¥ 298.00</s><strong class="h-price">¥<b>199.0</b></strong></p>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="h-2dtimg"><img width="120" height="120" lsrc="img/h-img_06.jpg" alt=""/>
+                                </div>
+                                <p class="h-content-2dp ovh ">包邮 天眉葛根茶美丽女人装 两盒子起售</p>
+                            </a>
+
+                            <p class="h-price-line"><s>¥ 298.00</s><strong class="h-price">¥<b>199.0</b></strong></p>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="h-2dtimg"><img width="120" height="120" lsrc="img/h-img_06.jpg" alt=""/>
+                                </div>
+                                <p class="h-content-2dp ovh ">包邮 天眉葛根茶美丽女人装 两盒子起售</p>
+                            </a>
+
+                            <p class="h-price-line"><s>¥ 298.00</s><strong class="h-price">¥<b>199.0</b></strong></p>
+                        </li>
                     </ul>
+                </div>
+                <div class="h-content-2dm">
+                    <a href=""><img lsrc="img/h-img_10.jpg" alt=""/></a>
+                    <a href=""><img lsrc="img/h-img_10_b.jpg" alt=""/></a>
                 </div>
             </div>
         </div>
-        <div class="h-content-2d fr">
-            <div class="h-content-2dt">
-                <ul>
-                    <li>
-                        <a href="">
-                            <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/>
-                            </div>
-                            <p class="h-content-2dp ovh ">包邮 天眉葛根茶美丽女人装 两盒子起售</p>
-                        </a>
+        <div class="h-content h-fore02" data-header="新品上架">
+            <ul>
+                <li>
+                    <a href="">
+                        <div class="h-2dtimg"><img width="120" height="120" lsrc="img/h-img_06.jpg" alt=""/></div>
+                        <p class="ovh">包邮 天眉葛根茶美丽女</p>
+                    </a>
 
-                        <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/>
-                            </div>
-                            <p class="h-content-2dp ovh ">包邮 天眉葛根茶美丽女人装 两盒子起售</p>
-                        </a>
+                    <p class="h-price-line"><s>¥ 298.00</s><strong class="h-price">¥<b>199.0</b></strong></p>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="h-2dtimg"><img width="120" height="120" lsrc="img/h-img_06.jpg" alt=""/></div>
+                        <p class="ovh">包邮 天眉葛根茶美丽女</p>
+                    </a>
 
-                        <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/>
-                            </div>
-                            <p class="h-content-2dp ovh ">包邮 天眉葛根茶美丽女人装 两盒子起售</p>
-                        </a>
+                    <p class="h-price-line"><s>¥ 298.00</s><strong class="h-price">¥<b>199.0</b></strong></p>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="h-2dtimg"><img width="120" height="120" lsrc="img/h-img_06.jpg" alt=""/></div>
+                        <p class="ovh">包邮 天眉葛根茶美丽女</p>
+                    </a>
 
-                        <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/>
-                            </div>
-                            <p class="h-content-2dp ovh ">包邮 天眉葛根茶美丽女人装 两盒子起售</p>
-                        </a>
+                    <p class="h-price-line"><s>¥ 298.00</s><strong class="h-price">¥<b>199.0</b></strong></p>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="h-2dtimg"><img width="120" height="120" lsrc="img/h-img_06.jpg" alt=""/></div>
+                        <p class="ovh">包邮 天眉葛根茶美丽女</p>
+                    </a>
 
-                        <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/>
-                            </div>
-                            <p class="h-content-2dp ovh ">包邮 天眉葛根茶美丽女人装 两盒子起售</p>
-                        </a>
+                    <p class="h-price-line"><s>¥ 298.00</s><strong class="h-price">¥<b>199.0</b></strong></p>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="h-2dtimg"><img width="120" height="120" lsrc="img/h-img_06.jpg" alt=""/></div>
+                        <p class="ovh">包邮 天眉葛根茶美丽女</p>
+                    </a>
 
-                        <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
-                    </li>
-                </ul>
+                    <p class="h-price-line"><s>¥ 298.00</s><strong class="h-price">¥<b>199.0</b></strong></p>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="h-2dtimg"><img width="120" height="120" lsrc="img/h-img_06.jpg" alt=""/></div>
+                        <p class="ovh">包邮 天眉葛根茶美丽女</p>
+                    </a>
+
+                    <p class="h-price-line"><s>¥ 298.00</s><strong class="h-price">¥<b>199.0</b></strong></p>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="h-2dtimg"><img width="120" height="120" lsrc="img/h-img_06.jpg" alt=""/></div>
+                        <p class="ovh">包邮 天眉葛根茶美丽女</p>
+                    </a>
+
+                    <p class="h-price-line"><s>¥ 298.00</s><strong class="h-price">¥<b>199.0</b></strong></p>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="h-2dtimg"><img width="120" height="120" lsrc="img/h-img_06.jpg" alt=""/></div>
+                        <p class="ovh">包邮 天眉葛根茶美丽女</p>
+                    </a>
+
+                    <p class="h-price-line"><s>¥ 298.00</s><strong class="h-price">¥<b>199.0</b></strong></p>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="h-2dtimg"><img width="120" height="120" lsrc="img/h-img_06.jpg" alt=""/></div>
+                        <p class="ovh">包邮 天眉葛根茶美丽女</p>
+                    </a>
+
+                    <p class="h-price-line"><s>¥ 298.00</s><strong class="h-price">¥<b>199.0</b></strong></p>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="h-2dtimg"><img width="120" height="120" lsrc="img/h-img_06.jpg" alt=""/></div>
+                        <p class="ovh">包邮 天眉葛根茶美丽女</p>
+                    </a>
+
+                    <p class="h-price-line"><s>¥ 298.00</s><strong class="h-price">¥<b>199.0</b></strong></p>
+                </li>
+            </ul>
+        </div>
+        <div class="h-content h-fore03" data-header="热门推荐">
+            <div class="h-content3-l fl">
+                <div class="h-sliderD dsFollowSlide">
+                    <div class="dsFollowSlide-view">
+                        <ul class="dsFollowSlide-con">
+                            <li data-title="秋季新品热卖<i>></i>"><a href=""><img lsrc="img/h-img_15-07.jpg" alt=""/></a></li>
+                            <li data-title="秋季新品热卖<i>></i>"><a href=""><img lsrc="img/h-img_15-07.jpg" alt=""/></a></li>
+                            <li data-title="秋季新品热卖<i>></i>"><a href=""><img lsrc="img/h-img_15-07.jpg" alt=""/></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="h-content-2dm">
-                <a href=""><img src="img/h-img_10.jpg" alt=""/></a>
-                <a href=""><img src="img/h-img_10_b.jpg" alt=""/></a>
+            <div class="h-content3-r ufl fr">
+                <ul class="b-hover">
+                    <li><a href=""><img lsrc="img/h-img_15-08.jpg" alt=""/></a></li>
+                    <li><a href=""><img lsrc="img/h-img_15-08.jpg" alt=""/></a></li>
+                    <li><a href=""><img lsrc="img/h-img_15-08.jpg" alt=""/></a></li>
+                    <li><a href=""><img lsrc="img/h-img_15-08.jpg" alt=""/></a></li>
+                    <li><a href=""><img lsrc="img/h-img_15-08.jpg" alt=""/></a></li>
+                    <li><a href=""><img lsrc="img/h-img_15-08.jpg" alt=""/></a></li>
+                    <li><a href=""><img lsrc="img/h-img_15-08.jpg" alt=""/></a></li>
+                </ul>
             </div>
         </div>
     </div>
-</div>
-<div class="h-fore02" data-index="1">
-    <div class="h-title">
-        <h2>新品上架</h2>
+    <div class="f05-2d h-latest">
+        <div class="h-title">
+            <h2>成交动态</h2>
+        </div>
+        <div class="h-content">
+            <iframe frameborder="0" scrolling="no" id="h-latest" src="http://www.100hg.com/latestdeal.html"
+                    class="h-latest"></iframe>
+        </div>
     </div>
-    <div class="h-content2 h-content none">
+</div>
+<!-- 促销区 End -->
+<!-- 楼层 -->
+<div class="wd floor h01">
+<div class="floor-left">
+    <div class="h-title">
+        <h2>1F服饰鞋包</h2>
+    </div>
+    <div class="h-content h-hotSale">
+        <h3>热销排行榜</h3>
         <ul>
-            <li>
-                <a href="">
-                    <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/></div>
-                    <p class="ovh">包邮 天眉葛根茶美丽女</p>
-                </a>
+            <li class="current">
+                <s>1</s>
+                <a href="" class="h-proName">入秋微微凉 穿上它正合适 热销特价款浪莎正品丝袜</a>
 
-                <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
+                <div>
+                    <a href=""><img hsrc="img/h-img_15-05.jpg" alt=""/></a>
+                    <strong class="h-price">¥<b>19.9</b></strong>
+                </div>
             </li>
             <li>
-                <a href="">
-                    <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/></div>
-                    <p class="ovh ">包邮 天眉葛根茶美丽女</p>
-                </a>
+                <s>2</s>
+                <a href="" class="h-proName">入秋微微凉 穿上它正合适 热销特价款浪莎正品丝袜</a>
 
-                <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
+                <div>
+                    <a href=""><img hsrc="img/h-img_15-05.jpg" alt=""/></a>
+                    <strong class="h-price">¥<b>19.9</b></strong>
+                </div>
             </li>
             <li>
-                <a href="">
-                    <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/></div>
-                    <p class="ovh ">包邮 天眉葛根茶美丽女</p>
-                </a>
+                <s>3</s>
+                <a href="" class="h-proName">入秋微微凉 穿上它正合适 热销特价款浪莎正品丝袜</a>
 
-                <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
+                <div>
+                    <a href=""><img hsrc="img/h-img_15-05.jpg" alt=""/></a>
+                    <strong class="h-price">¥<b>19.9</b></strong>
+                </div>
             </li>
             <li>
-                <a href="">
-                    <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/></div>
-                    <p class="ovh ">包邮 天眉葛根茶美丽女</p>
-                </a>
+                <s>4</s>
+                <a href="" class="h-proName">入秋微微凉 穿上它正合适 热销特价款浪莎正品丝袜</a>
 
-                <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
+                <div>
+                    <a href=""><img hsrc="img/h-img_15-05.jpg" alt=""/></a>
+                    <strong class="h-price">¥<b>19.9</b></strong>
+                </div>
             </li>
-            <li>
-                <a href="">
-                    <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/></div>
-                    <p class="ovh ">包邮 天眉葛根茶美丽女</p>
-                </a>
+            <li class="last">
+                <s>5</s>
+                <a href="" class="h-proName">入秋微微凉 穿上它正合适 热销特价款浪莎正品丝袜</a>
 
-                <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
-            </li>
-            <li>
-                <a href="">
-                    <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/></div>
-                    <p class="ovh ">包邮 天眉葛根茶美丽女</p>
-                </a>
-
-                <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
-            </li>
-            <li>
-                <a href="">
-                    <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/></div>
-                    <p class="ovh ">包邮 天眉葛根茶美丽女</p>
-                </a>
-
-                <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
-            </li>
-            <li>
-                <a href="">
-                    <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/></div>
-                    <p class="ovh ">包邮 天眉葛根茶美丽女</p>
-                </a>
-
-                <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
-            </li>
-            <li>
-                <a href="">
-                    <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/></div>
-                    <p class="ovh ">包邮 天眉葛根茶美丽女</p>
-                </a>
-
-                <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
-            </li>
-            <li>
-                <a href="">
-                    <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/></div>
-                    <p class="ovh ">包邮 天眉葛根茶美丽女</p>
-                </a>
-
-                <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
-            </li>
-            <li>
-                <a href="">
-                    <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/></div>
-                    <p class="ovh ">包邮 天眉葛根茶美丽女</p>
-                </a>
-
-                <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
-            </li>
-            <li>
-                <a href="">
-                    <div class="h-2dtimg"><img width="120" height="120" src="img/h-img_06.jpg" alt=""/></div>
-                    <p class="ovh ">包邮 天眉葛根茶美丽女</p>
-                </a>
-
-                <p><s>¥ 298.00</s><strong class="h-price fr">¥<b>199.0</b></strong></p>
+                <div>
+                    <a href=""><img hsrc="img/h-img_15-05.jpg" alt=""/></a>
+                    <strong class="h-price">¥<b>19.9</b></strong>
+                </div>
             </li>
         </ul>
     </div>
 </div>
-<div class="h-fore03" data-index="2">
-    <div class="h-title">
-        <h2>热门推荐</h2>
-    </div>
-    <div class="h-content h-content3 none">
-        <div class="h-content3-l fl">
-            <ul>
-                <li><a href=""><img src="img/h-img_15-07.jpg" alt=""/></a></li>
-            </ul>
-        </div>
-        <div class="h-content3-r ufl fr">
-            <ul>
-                <li><a href=""><img src="img/h-img_15-08.jpg" alt=""/></a></li>
-                <li><a href=""><img src="img/h-img_15-08.jpg" alt=""/></a></li>
-                <li><a href=""><img src="img/h-img_15-08.jpg" alt=""/></a></li>
-                <li><a href=""><img src="img/h-img_15-08.jpg" alt=""/></a></li>
-                <li><a href=""><img src="img/h-img_15-08.jpg" alt=""/></a></li>
-                <li><a href=""><img src="img/h-img_15-08.jpg" alt=""/></a></li>
-                <li><a href=""><img src="img/h-img_15-08.jpg" alt=""/></a></li>
+<div class="floor-right">
+<div class="h-content" data-header="时尚女装">
+    <div class="h-floorSlide dsFollowSlide">
+        <div class="dsFollowSlide-view">
+            <ul class="dsFollowSlide-con">
+                <li><a href=""><img width="238" height="380" src="img/h-floorSlide.jpg" alt=""/></a></li>
+                <li><a href=""><img width="238" height="380" src="img/h-floorSlide.jpg" alt=""/></a></li>
+                <li><a href=""><img width="238" height="380" src="img/h-floorSlide.jpg" alt=""/></a></li>
             </ul>
         </div>
     </div>
+    <ul class="p-list">
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+    </ul>
 </div>
-<div class="h-title-last"></div>
+<div class="h-content" data-header="魅力男装">
+    <ul class="p-list">
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+    </ul>
 </div>
-<div class="f05-2d h-latest">
+<div class="h-content" data-header="精品女鞋">
+    <ul class="p-list">
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+    </ul>
+</div>
+<div class="h-content" data-header="创意服饰">
+    <ul class="p-list">
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+<div class="wd floor h02">
+<div class="floor-left">
     <div class="h-title">
-        <h2>成交动态</h2>
+        <h2>2F服饰鞋包</h2>
     </div>
-    <div class="h-content">
-        <iframe frameborder="0" scrolling="no" id="h-latest" src="http://www.100hg.com/latestdeal.html"
-                class="h-latest"></iframe>
+    <div class="h-content h-hotSale">
+        <h3>热销排行榜</h3>
+        <ul>
+            <li class="current">
+                <s>1</s>
+                <a href="" class="h-proName">入秋微微凉 穿上它正合适 热销特价款浪莎正品丝袜</a>
+
+                <div>
+                    <a href=""><img hsrc="img/h-img_15-05.jpg" alt=""/></a>
+                    <strong class="h-price">¥<b>19.9</b></strong>
+                </div>
+            </li>
+            <li>
+                <s>2</s>
+                <a href="" class="h-proName">入秋微微凉 穿上它正合适 热销特价款浪莎正品丝袜</a>
+
+                <div>
+                    <a href=""><img hsrc="img/h-img_15-05.jpg" alt=""/></a>
+                    <strong class="h-price">¥<b>19.9</b></strong>
+                </div>
+            </li>
+            <li>
+                <s>3</s>
+                <a href="" class="h-proName">入秋微微凉 穿上它正合适 热销特价款浪莎正品丝袜</a>
+
+                <div>
+                    <a href=""><img hsrc="img/h-img_15-05.jpg" alt=""/></a>
+                    <strong class="h-price">¥<b>19.9</b></strong>
+                </div>
+            </li>
+            <li>
+                <s>4</s>
+                <a href="" class="h-proName">入秋微微凉 穿上它正合适 热销特价款浪莎正品丝袜</a>
+
+                <div>
+                    <a href=""><img hsrc="img/h-img_15-05.jpg" alt=""/></a>
+                    <strong class="h-price">¥<b>19.9</b></strong>
+                </div>
+            </li>
+            <li class="last">
+                <s>5</s>
+                <a href="" class="h-proName">入秋微微凉 穿上它正合适 热销特价款浪莎正品丝袜</a>
+
+                <div>
+                    <a href=""><img hsrc="img/h-img_15-05.jpg" alt=""/></a>
+                    <strong class="h-price">¥<b>19.9</b></strong>
+                </div>
+            </li>
+        </ul>
     </div>
 </div>
-</div>
-<!-- 促销区 End -->
-<!-- 楼层 -->
-<div class="wd floor01">
-    <div class="fl floor01-l">
-        <h2 class="tac ">1F运动健康</h2>
-
-        <p class="em3 ovh">
-            <b>1</b>
-            <span>运动健康运动健康运动健康运动健康运动健康运动健康运动健康</span>
-        </p>
-
-        <p class="tac">
-            <a href=""><img src="img/h-img_15-05.jpg" alt=""/></a><br/>
-        </p>
-        <strong class="h-price">¥<b>76.9</b></strong>
-
-        <div class="floor01-p">
-            <p><b>2</b><a href="">运动健康运动健康运动健康运</a></p>
-
-            <p><b>3</b><a href="">运动健康运动健康运动健康运</a></p>
-
-            <p><b>4</b><a href="">运动健康运动健康运动健康运</a></p>
-
-            <p><b>5</b><a href="">运动健康运动健康运动健康运</a></p>
+<div class="floor-right">
+<div class="h-content" data-header="时尚女装">
+    <div class="h-floorSlide dsFollowSlide">
+        <div class="dsFollowSlide-view">
+            <ul class="dsFollowSlide-con">
+                <li><a href=""><img width="238" height="380" src="img/h-floorSlide.jpg" alt=""/></a></li>
+                <li><a href=""><img width="238" height="380" src="img/h-floorSlide.jpg" alt=""/></a></li>
+                <li><a href=""><img width="238" height="380" src="img/h-floorSlide.jpg" alt=""/></a></li>
+            </ul>
         </div>
     </div>
-    <div class="fr floor01-r">
+    <ul class="p-list">
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+    </ul>
+</div>
+<div class="h-content" data-header="魅力男装">
+    <ul class="p-list">
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+    </ul>
+</div>
+<div class="h-content" data-header="精品女鞋">
+    <ul class="p-list">
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+    </ul>
+</div>
+<div class="h-content" data-header="创意服饰">
+    <ul class="p-list">
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+<div class="wd floor h03 floor-last">
+<div class="floor-left">
+    <div class="h-title">
+        <h2>3F服饰鞋包</h2>
+    </div>
+    <div class="h-content h-hotSale">
+        <h3>热销排行榜</h3>
+        <ul>
+            <li class="current">
+                <s>1</s>
+                <a href="" class="h-proName">入秋微微凉 穿上它正合适 热销特价款浪莎正品丝袜</a>
+
+                <div>
+                    <a href=""><img hsrc="img/h-img_15-05.jpg" alt=""/></a>
+                    <strong class="h-price">¥<b>19.9</b></strong>
+                </div>
+            </li>
+            <li>
+                <s>2</s>
+                <a href="" class="h-proName">入秋微微凉 穿上它正合适 热销特价款浪莎正品丝袜</a>
+
+                <div>
+                    <a href=""><img hsrc="img/h-img_15-05.jpg" alt=""/></a>
+                    <strong class="h-price">¥<b>19.9</b></strong>
+                </div>
+            </li>
+            <li>
+                <s>3</s>
+                <a href="" class="h-proName">入秋微微凉 穿上它正合适 热销特价款浪莎正品丝袜</a>
+
+                <div>
+                    <a href=""><img hsrc="img/h-img_15-05.jpg" alt=""/></a>
+                    <strong class="h-price">¥<b>19.9</b></strong>
+                </div>
+            </li>
+            <li>
+                <s>4</s>
+                <a href="" class="h-proName">入秋微微凉 穿上它正合适 热销特价款浪莎正品丝袜</a>
+
+                <div>
+                    <a href=""><img hsrc="img/h-img_15-05.jpg" alt=""/></a>
+                    <strong class="h-price">¥<b>19.9</b></strong>
+                </div>
+            </li>
+            <li class="last">
+                <s>5</s>
+                <a href="" class="h-proName">入秋微微凉 穿上它正合适 热销特价款浪莎正品丝袜</a>
+
+                <div>
+                    <a href=""><img hsrc="img/h-img_15-05.jpg" alt=""/></a>
+                    <strong class="h-price">¥<b>19.9</b></strong>
+                </div>
+            </li>
+        </ul>
     </div>
 </div>
-<div class="wd floor02">
+<div class="floor-right">
+<div class="h-content" data-header="时尚女装">
+    <div class="h-floorSlide dsFollowSlide">
+        <div class="dsFollowSlide-view">
+            <ul class="dsFollowSlide-con">
+                <li><a href=""><img width="238" height="380" src="img/h-floorSlide.jpg" alt=""/></a></li>
+                <li><a href=""><img width="238" height="380" src="img/h-floorSlide.jpg" alt=""/></a></li>
+                <li><a href=""><img width="238" height="380" src="img/h-floorSlide.jpg" alt=""/></a></li>
+            </ul>
+        </div>
+    </div>
+    <ul class="p-list">
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
 
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+    </ul>
 </div>
-<div class="wd floor03">
+<div class="h-content" data-header="魅力男装">
+    <ul class="p-list">
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
 
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+    </ul>
+</div>
+<div class="h-content" data-header="精品女鞋">
+    <ul class="p-list">
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+    </ul>
+</div>
+<div class="h-content" data-header="创意服饰">
+    <ul class="p-list">
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+        <li>
+            <a href="">
+                <div><img hsrc="img/h-img_15-06.jpg" alt=""/></div>
+                <p class="p-proName">尚都比拉包邮 夏装新款修身女装 花色蕾丝雪纺夏季短袖连衣裙</p>
+            </a>
+
+            <p class="h-price-line">
+                <s>¥ 399.0</s>
+                <strong class="h-price">¥<b>199.0</b></strong>
+            </p>
+        </li>
+    </ul>
+</div>
+</div>
 </div>
 <!-- 楼层 End -->
 <!-- 全站脚底 -->
@@ -885,7 +2116,8 @@
             </div>
             <div class="h-weixin">
                 <p>百货购微信</p>
-                <p><img src="img/h-weixin.gif" alt=""/></p>
+
+                <p><img hsrc="img/h-weixin.gif" alt=""/></p>
             </div>
         </div>
     </div>
@@ -942,12 +2174,8 @@
 <script type="text/javascript" src="http://fed.www.100hg.com/js/jQuery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/followSlide.js"></script>
 <script type="text/javascript" src="js/common-v2.js"></script>
+<script type="text/javascript" src="js/shoyLazy.js"></script>
+<script type="text/javascript" src="js/lineSlide.js"></script>
 <script type="text/javascript" src="js/index-v2.js"></script>
-<!--[if lt IE 7]>
-<script type="text/javascript"> try {
-    document.execCommand("BackgroundImageCache", false, true);
-} catch (e) {
-} </script>
-<![endif]-->
 </body>
 </html>

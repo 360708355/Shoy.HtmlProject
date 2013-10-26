@@ -5,7 +5,9 @@ if (window.ActiveXObject) {
     var ua = navigator.userAgent.toLowerCase();
     var ie=ua.match(/msie ([\d.]+)/)[1];
     if(ie==6.0){
-        document.write('<div class="not-support">百货购商城从2013年11月1日已停止对IE6的支持，请升级您的浏览器以获得更好更安全的购物体验。</div>');
+        var word="百货购商城从2013年11月1日起已停止对IE6的支持，请升级您的浏览器以获得更好更安全的购物体验！";
+        alert(word);
+        document.write('<div class="not-support">' + word + '</div>');
     }
 }
 huge.wideMode=(function(){
@@ -85,6 +87,10 @@ huge.cookie={
             document.cookie = name + '=' + (domain ? '; domain=' + domain : '') + '; expires=Thu, 01-Jan-70 00:00:01 GMT';
         }
     }
+};
+String.prototype.replaceAll=function(reg,str){
+    var g=new RegExp(reg,"gi");
+    return this.replace(g,str);
 };
 huge.uName=(function(){
     var _u_name = huge.cookie.get("_hg_u_name");
